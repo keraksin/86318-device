@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Девайс</title>
+  </head>
+  <body>
+      <header class="main-header">
+          <div class=container>
+              <h1 class="index-logo">Device</h1>
+              <div class="user-block">
+                  <ul>
+                      <li><input type="submit" value="Найти">
+                          <input class="search" type="search" placeholder="Поиск по сайту"></li>
+                      <li><a class="profile" href="#">Валентин Петухов</a></li>
+                          <a class="logout" href="#">Выйти</a>
+                      <li><a class="compare" href="#">Сравнение</a></li>
+                      <li><a class="cart" href="#">Корзина</a></li>
+                  </ul>
+                  <nav class="main-navigation">
+                      <ul>
+                          <li>
+                              <a class="catalog" href="#">Каталог товаров</a>
+                              <!-- + пункты выпадающего меню -->
+                          </li>
+                          <li>
+                              <a class="delivery" href="#">Доставка</a>
+                          </li>
+                          <li>
+                              <a class="warranty" href="#">Гарантия</a>
+                          </li>
+                          <li>
+                              <a class="contacts" href="#">Контакты</a>
+                          </li>
+                      </ul>
+                  </nav>
+              </div>
+          </div>
+      </header>
+      <main class="container">
+          <h2 class="category-title">Моноподы для селфи</h2>
+          <div class="filters">
+             <section class="price">
+                 <p>Стоимость</p>
+                 <input class="price-range" type="range" min="0" max="20000" step="500" value="50">
+             </section> 
+             <section class="color">
+                 <p>Цвет</p>
+                 <label><input type="checkbox" name="color-check-1" value="">Черный</label><br>
+                 <label><input type="checkbox" name="color-check-2" value="">Белый</label><br>
+                 <label><input type="checkbox" name="color-check-3" value="">Синий</label><br>
+                 <label><input type="checkbox" name="color-check-4" value="">Красный</label><br>
+                 <label><input type="checkbox" name="color-check-5" value="">Розовый</label>
+             </section>
+             <section class="bluetooth">
+                 <p>Bluetooth</p>
+                 <label><input type="radio" name="bt-radio-1" value="">Есть</label><br>
+                 <label><input type="radio" name="bt-radio-1" value="">Нет</label><br>
+             </section>
+              <button class="btn" type="button" value="">Показать</button>
+          </div>
+          <div class="search-results">
+              <section class="sort">
+                  <button class="sort-btn" type="button" value="">По цене</button>
+                  <button class="sort-btn" type="button" value="">По типу</button>
+                  <button class="sort-btn" type="button" value="">По популярности</button>
+                  <!-- + кнопки сортировки по возрастанию/убыванию -->
+              </section>
+              <article class="catalog-item">
+                  <a href="#"><img src="http://dummyimage.com/120"></a>
+                  <p class="catalog-item-title">Любительская селфи-палка</p>
+                  <p class="catalog-item-price">500 руб.</p>
+              </article>
+              <article class="catalog-item">
+                  <a href="#"><img src="http://dummyimage.com/120"></a>
+                  <p class="catalog-item-title">Профессиональная селфи-палка</p>
+                  <p class="catalog-item-price">1500 руб.</p>
+              </article>
+              <article class="catalog-item">
+                  <a href="#"><img src="http://dummyimage.com/120"></a>
+                  <p class="catalog-item-title">Непотопляемая селфи-палка</p>
+                  <p class="catalog-item-price">2500 руб.</p>
+              </article>
+              <article class="catalog-item">
+                  <a href="#"><img src="http://dummyimage.com/120"></a>
+                  <p class="catalog-item-title">Селфи-палка «Следуй за мной»</p>
+                  <p class="catalog-item-price">4900 руб.</p>
+              </article>
+              <div class="page-nav">
+                  <button class="page-nav-btn" type="button" value="">Назад</button>
+                  <button class="page-nav-btn" type="button" value="">1</button>
+                  <button class="page-nav-btn" type="button" value="">2</button>
+                  <button class="page-nav-btn" type="button" value="">3</button>
+                  <button class="page-nav-btn" type="button" value="">Вперед</button>
+              </div>
+          </div>
+      </main>
+      <footer class="main-footer">
+          <div class="container">
+              <div class="footer-address">
+                  <h2>Device</h2>
+                  г. Москва, ул. Строителей, 15
+              </div>
+              <div class="footer-nav">
+                  <ul>
+                      <li><a href="#">Доставка</a></li>
+                      <li><a href="#">Гарантия</a></li>
+                      <li><a href="#">Контакты</a></li>
+                  </ul>
+              </div>
+              <div class="footer-social">
+                  <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
+                  <a class="social-btn social-btn-inst" href="#">Инстаграм</a>
+                  <a class="social-btn social-btn-twi" href="#">Твиттер</a>
+              </div>
+              <div class="footer-user">
+                  <ul>
+                      <li><a class="login" href="#">Войти</a></li>
+                      <li><a class="compare" href="#">Сравнить</a></li>
+                      <li><a class="cart" href="#">Корзина</a></li>
+                  </ul>
+              </div>
+              <div class="footer-phone">
+                  <p>Тел: +7 (495) 495-95-95</p>
+              </div>
+              <div class="footer-copyright">
+                  <a href="https://htmlacademy.ru"><img src="img/#.png" width="20" height="30"></a>
+              </div>
+          </div>
+      </footer>
+ </body>
+</html>
