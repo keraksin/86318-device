@@ -1,3 +1,9 @@
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 body {
     font-size: 15px;
     line-height: 24px;
@@ -15,8 +21,239 @@ body {
     letter-spacing: 10pt;
 }
 
-h2 {
+h2,
+h3  {
     font-family: "Gilroy", "Arial", sans-serif;
     font-size: 47px;    
     font-weight: bolder;    
+}
+
+.logo {
+    margin-bottom: 35px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container {
+    width: 1160px;
+    margin: 0 auto;
+}
+
+.index-slider {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.index-slider-pic img {
+    float: left;
+    margin-right: 120px;
+}
+
+.slider-title {
+    line-height: 50px;
+}
+
+slider-description {
+    font-size: 15px;
+    line-height: 30px;
+}
+
+.slider-feature {
+    display: inline-block;
+    margin-top: 70px;
+    margin-right: 80px;
+}
+
+.slider-feature:last-child {
+    margin-right: 0;
+}
+
+
+.feature {
+    font-family: "Gilroy", "Arial", sans-serif;
+    font-size: 36px;
+}
+
+.slider-feature p {
+    font-family: "Open Sans", "Arial", sans-serif;
+    font-size: 13px;
+    color: #464646;
+}
+
+.categories {    
+    margin-top: 115px; 
+    
+}
+
+.categories-item {
+    float: left;
+    display: block;
+    width: 160px;
+    height: 160px;
+    background-color: #f0c52e;
+    margin-right: 40px;
+    
+}
+
+.categories-item:last-child {
+   margin-right: 0;
+}
+
+.categories-item {    
+    margin-bottom: 190px;    
+}
+
+.categories-item a {
+    display: block;
+    float: left;
+    color: #000000;
+    font-size: 18px;
+    font-family: "Gilroy", "Arial", sans-serif;
+    font-weight: bold;
+    
+    text-decoration: none;
+    
+}
+
+.categories-item-icon {
+    margin-bottom: 40px;
+}
+
+.services-btn {
+    float: left;
+    width: 280px;
+    margin-right: 120px;
+}
+
+.services-info {
+    float: left;
+    width: 500px;
+    
+}
+
+.services-img {
+    float: right;
+    margin-left: 100px;
+}
+
+.services {
+    background-color: #e5e5e5;
+    
+    height: 290px;
+    margin-bottom: 100px;
+}
+
+.brands-block {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 110px;
+}
+
+.brands-block img {
+    float: left;
+    display: block;
+    margin-right: 40px;
+}
+
+.brands-block img:last-child {
+    margin-right: 0;
+}
+
+.index-content-left {
+    float: left;
+    width: 500px;
+    margin-right: 100px;
+}
+
+.index-content-right {
+    float: right;
+    width: 560px;
+}
+
+.index-content {
+    margin-bottom: 90px;
+}
+
+.main-footer {
+    height: 325px;
+    background-color: #464646;
+}
+
+.footer-top {
+    padding-top: 60px;
+}
+
+
+.footer-top h2 {
+    float: left;
+    margin-top: 0;
+    margin-right: 640px;
+    color: #f0c52e;
+}
+
+.footer-top li {
+    float: right;
+    
+}
+
+.address {
+    float: left;
+    display: block;
+    margin-right: 160px;
+}
+
+.footer-second li {
+    float: left;
+}
+
+.footer-phone {
+    float: right;
+    
+}
+
+.footer-line {
+    width: 80px;
+	height: 7px;
+	background: #f0c52e;
+    float: left;
+    margin-right: 420px;
+}
+
+.footer-social {
+    float: left;
+}
+
+.footer-copyright {
+    float: right;
+}
+
+.footer-third {
+    margin-top: 35px;
+    margin-bottom: 65px;
+}
+
+/* CATALOG.HTML */
+
+.path {
+    display: block;
+    margin-bottom: 50px;
+}
+
+.filters {
+    float: left;
+    width: 270px;
+}
+
+.search-results {
+    float: right;
+    width: 760px;
+}
+
+
+.catalog-item {
+    display: inline-block;
+}
+
+.catalog-item:nth-child(odd) {
+    margin-left: 20px;
 }
