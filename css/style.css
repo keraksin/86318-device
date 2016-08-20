@@ -5,6 +5,7 @@
 }
 
 body {
+    min-width: 1160px;
     font-size: 15px;
     line-height: 24px;
     color: #000000;
@@ -13,7 +14,177 @@ body {
     
 }
 
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-icon-cart {
+    width: 12px;
+    height: 12px;
+    background-position: -5px -5px;
+}
+
+.sprite-icon-cart-footer {
+    width: 12px;
+    height: 12px;
+    background-position: -5px -27px;
+}
+
+.sprite-icon-cart-footer-down {
+    width: 12px;
+    height: 12px;
+    background-position: -5px -49px;
+}
+
+.sprite-icon-cart-footer-hvr {
+    width: 12px;
+    height: 12px;
+    background-position: -5px -71px;
+}
+
+.sprite-icon-checkbox {
+    width: 12px;
+    height: 7px;
+    background-position: -5px -93px;
+}
+
+.sprite-icon-compare {
+    width: 10px;
+    height: 10px;
+    background-position: -5px -110px;
+}
+
+.sprite-icon-compare-footer {
+    width: 10px;
+    height: 10px;
+    background-position: -5px -130px;
+}
+
+.sprite-icon-compare-footer-down {
+    width: 10px;
+    height: 10px;
+    background-position: -5px -150px;
+}
+
+.sprite-icon-compare-footer-hvr {
+    width: 10px;
+    height: 10px;
+    background-position: -5px -170px;
+}
+
+.sprite-icon-facebook {
+    width: 39px;
+    height: 38px;
+    background-position: -5px -190px;
+}
+
+.sprite-icon-facebook-down {
+    width: 39px;
+    height: 38px;
+    background-position: -5px -238px;
+}
+
+.sprite-icon-facebook-hvr {
+    width: 39px;
+    height: 38px;
+    background-position: -5px -286px;
+}
+
+.sprite-icon-htmlacademy {
+    width: 27px;
+    height: 34px;
+    background-position: -5px -334px;
+}
+
+.sprite-icon-htmlacademy-down {
+    width: 27px;
+    height: 34px;
+    background-position: -5px -378px;
+}
+
+.sprite-icon-htmlacademy-hvr {
+    width: 27px;
+    height: 34px;
+    background-position: -5px -422px;
+}
+
+.sprite-icon-inst {
+    width: 39px;
+    height: 38px;
+    background-position: -5px -466px;
+}
+
+.sprite-icon-inst-down {
+    width: 39px;
+    height: 38px;
+    background-position: -5px -514px;
+}
+
+.sprite-icon-inst-hvr {
+    width: 39px;
+    height: 38px;
+    background-position: -5px -562px;
+}
+
+.sprite-icon-radiocheck {
+    width: 9px;
+    height: 9px;
+    background-position: -5px -610px;
+}
+
+.sprite-icon-search {
+    width: 16px;
+    height: 16px;
+    background-position: -5px -629px;
+}
+
+.sprite-icon-twitter {
+    width: 38px;
+    height: 38px;
+    background-position: -5px -655px;
+}
+
+.sprite-icon-twitter-down {
+    width: 38px;
+    height: 38px;
+    background-position: -5px -703px;
+}
+
+.sprite-icon-twitter-hvr {
+    width: 38px;
+    height: 38px;
+    background-position: -5px -751px;
+}
+
+.sprite-icon-user {
+    width: 13px;
+    height: 12px;
+    background-position: -5px -799px;
+}
+
+.sprite-icon-user-footer {
+    width: 13px;
+    height: 12px;
+    background-position: -5px -821px;
+}
+
+.sprite-icon-user-footer-down {
+    width: 13px;
+    height: 12px;
+    background-position: -5px -843px;
+}
+
+.sprite-icon-user-footer-hvr {
+    width: 13px;
+    height: 12px;
+    background-position: -5px -865px;
+}
+
 .logo {
+    margin-top: 15px;
+    margin-bottom: 35px;
     font-family: "Gilroy", "Arial", sans-serif;
     font-size: 48px;
     text-transform: uppercase;
@@ -28,15 +199,210 @@ h3  {
     font-weight: bolder;    
 }
 
-.logo {
-    margin-bottom: 35px;
-    margin-left: auto;
-    margin-right: auto;
+.user-block {
+    margin-bottom: 45px;
 }
+
+.search {
+    width: 300px;
+    float: left;
+    margin-right: 40px;    
+}
+
+
+.search-field {
+    border: none;
+    opacity: 0.3;
+    margin-left: 20px;
+}
+
+.search-field:focus {
+    outline: none;
+    border: none;
+    opacity: 1;
+}
+
+.breadcrumbs {
+    float: right;
+    max-width: 700px;
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+.breadcrumbs li {    
+    display: inline-block;
+    vertical-align: top;
+    font-size: 15px;
+    line-height: 36px;
+}
+
+.breadcrumbs a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.cart {
+    position: relative;
+    margin-left: 40px;
+}
+
+.cart::before {
+    content: "";
+    position: absolute;
+    top: 3%;
+    left: -40%;
+    width: 12px;
+    height: 12px;
+    background: transparent url("..img/sprite.png") no-repeat;
+    background-position: -5px -5px;
+}
+
+.compare {
+    position: relative;
+    margin-left: 220px;
+}
+
+.compare::before {
+    content: "";
+    position: absolute;
+    top: 30%;
+    left: -20%;
+    width: 10px;
+    height: 10px;
+    background: transparent url("..img/sprite.png");
+    background-position: -5px -110px;
+}
+
+.login {
+    position: relative;
+}
+
+.login::before {
+    content: "";
+    position: absolute;
+    top: 3%;
+    left: -40%;
+    width: 13px;
+    height: 12px;
+    background: transparent url("..img/sprite.png");
+    background-position: -5px -799px;
+}
+
+nav {
+    margin-bottom: 60px;
+}
+
+.main-navigation {
+    display: block;
+    float: right;
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+.main-navigation li {
+    font-size: 18px;
+    font-family: "Gilroy", "Arial", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.main-navigation a {
+    text-decoration: none;
+    color: #000000;
+    letter-spacing: 2px;
+}
+
+.catalog {
+    float: left;
+    margin-right: 300px;
+    font-size: 18px;
+    font-family: "Gilroy", "Arial", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: inline-block;
+    vertical-align: top;
+    text-decoration: none;
+    color: #000000;
+    letter-spacing: 2px;
+}
+
+.delivery {
+    margin-right: 40px;
+}
+
+.warranty {
+    margin-right: 100px;
+}
+
 
 .container {
     width: 1160px;
     margin: 0 auto;
+}
+
+/*_______________________________*/
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #000000;
+    font-family: "Gilroy", "Arial", sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: bold;    
+    width: 220px;
+    height: 9px;
+	background: #f0c52e;
+    text-align: center;    
+}
+
+.btn:hover {
+    width: 220px;
+    height: 40px;
+    background-color: #f0c52e;
+    color: #000000;
+}
+
+/* .index-slider .btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #000000;
+    font-family: "Gilroy", "Arial", sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: bold;
+    background: #e8c247;
+    width: 160px;
+    text-align: center;
+    padding: 0 40px;
+} */
+
+.services-btn ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.services-btn li {
+    margin-bottom: 25px;
+}
+
+.services-btn a {
+    
+}
+
+.index-content .btn {
+    width: 260px;
 }
 
 .index-slider {
@@ -159,15 +525,76 @@ slider-description {
     margin-right: 0;
 }
 
+.dji:hover {
+    background: url("../img/brand-1-hvr.png");
+}
+
+.sp:hover {
+    background: url("../img/brand-2-hvr.png");
+}
+
+.gopro:hover {
+    background: url("../img/brand-3-hvr.png");
+}
+
+.vive:hover {
+    background: url("../img/brand-4-hvr.png");
+}
+
+.index-content p {
+    font: inherit;
+    line-height: 30px;
+    color: #464646;
+}
+
+.index-content-left .btn {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    
+    margin-bottom: 0;
+}
+
+.index-content-left ul {
+    font-weight: bold;
+    font-family: "Gilroy", "Arial", sans-serif;
+    font-size: 16px;
+    line-height: 40px;    
+}
+
 .index-content-left {
+    position: relative;
     float: left;
     width: 500px;
     margin-right: 100px;
+    min-height: 588px;
 }
 
+.index-content-left > p {
+    margin-bottom: 40px;
+}
+
+
 .index-content-right {
+    position: relative;
     float: right;
     width: 560px;
+    min-height: 588px;
+}
+
+.index-content-right > p {
+    margin-bottom: 45px;
+}
+
+.index-content-right img {
+    margin-bottom: 80px;
+}
+
+.index-content-right .btn {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin-bottom: 0;
 }
 
 .index-content {
