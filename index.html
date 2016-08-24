@@ -8,17 +8,20 @@
   </head>
   <body>
       <header class="main-header">
+          
           <div class="container">
-              <h1 class="logo">Device</h1>
+              <div class="yellow-bg">
+              <div class="header-wrapper">
+              <h1 class="logo"><a href="#">Device</a></h1>
               <div class="user-block clearfix">
                   <div class="search">
                       <form name="search">                              
+                                  <input class="search-field" type="search" placeholder="Поиск по сайту">
                                   <input class="find-btn" type="image" src="img/icon-search.png" value="Найти">
-                                  <input class="search-field" type="search" placeholder="Поиск по сайту">                                  
                       </form>
                   </div>
                   <ul class="breadcrumbs">
-                      <li class="login"><a class="login" href="#">Войти</a></li>
+                      <li><a class="login" href="#">Войти</a></li>
                       <li><a class="compare" href="#">Сравнение</a></li>
                       <li><a class="cart" href="#">Корзина</a></li>
                   </ul>
@@ -39,32 +42,43 @@
                   </nav>
               
           </div>
+         </div>
+        </div>
       </header>
       <main class="container">
-          <div class="index-slider clearfix">
-              <div class="slides">
-                  <div class="index-slider-pic">
-                      <img src="img/slider-1.png"  alt="Селфи-палка №1">
-                      <!-- <img src="img/slider-2.png"  alt="Селфи-палка №1">
-                      <img src="img/slider-3.png"  alt="Селфи-палка №1"> -->
+          <div class="slider-wrapper">
+              <div class="index-slider clearfix">
+                  <!--<div class="slides">-->
+                      <div class="index-slider-pic">
+                          <img src="img/slider-1.png"  alt="Селфи-палка №1">
+                          <!-- <img src="img/slider-2.png"  alt="Селфи-палка №1">
+                          <img src="img/slider-3.png"  alt="Селфи-палка №1"> -->
+                      </div>
+                  <!--</div>-->
+                  
+                  <div class="slider-right">
+                      <div class="slider-right-elements">
+                          <div class="white-line"></div>
+                          <div class="slider-number">01</div>
+                      </div>
+                      <h2 class="slider-title">Делай селфи,<br>как Бен Стиллер!</h2>                  
+                  <p class="slider-description">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+                  <a class="btn" href="#">Подробнее</a>
+                  <div class="slider-features">
+                      <div class="slider-feature">
+                          <span class="feature">8,5 м</span>
+                          <p>Длина палки</p>
+                      </div>
+                      <div class="slider-feature">
+                          <span class="feature">5 кг</span>
+                          <p>Вес палки</p>
+                      </div>
+                      <div class="slider-feature">
+                          <span class="feature">Карбон</span>
+                          <p>Материал</p>
+                      </div>
                   </div>
-              </div>              
-              <h2 class="slider-title">Делай селфи,<br>как Бен Стиллер!</h2>
-              <p class="slider-description">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-              <a class="btn" href="#">Подробнее</a>
-              <div class="slider-features">
-                  <div class="slider-feature">
-                      <span class="feature">8,5 м</span>
-                      <p>Длина палки</p>
-                  </div>
-                  <div class="slider-feature">
-                      <span class="feature">5 кг</span>
-                      <p>Вес палки</p>
-                  </div>
-                  <div class="slider-feature">
-                      <span class="feature">Карбон</span>
-                      <p>Материал</p>
-                  </div>
+                      </div>
               </div>
           </div>
               <div class="categories clearfix">
@@ -92,30 +106,37 @@
                       <a class="categories-item-icon" href="#"><img src="img/popular-6.png" alt="Квадрокоптеры"></a>
                       <a href="#">Квадрокоптеры</a>
                   </div>
-              </div>          
-          <div class="services clearfix">
-              <div class="services-btn">
-                  <ul>
-                  <li><a class="btn">Доставка</a></li>
-                  <li><a class="btn">Гарантия</a></li>
-                  <li><a class="btn">Кредит</a></li>
-                  </ul>
               </div>
-              <div class="services-info">
-                  <h3>Доставка</h3>
-                  <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+          </main>
+          <div class="gray-bg">
+              <div class="services container clearfix">
+                  <div class="serv-wrapper">
+                  <div class="services-btn">
+                      <ul>
+                      <li class="btn-container"><a class="btn serv-btn" href="#">Доставка</a></li>
+                      <li class="btn-container"><a class="btn serv-btn" href="#">Гарантия</a></li>
+                      <li class="btn-container"><a class="btn serv-btn" href="#">Кредит</a></li>
+                      </ul>                  
+                  </div>
+                  <div class="vertical-line"></div>
+                  <div class="services-info">
+                      <h3>Доставка</h3>
+                      <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+                  </div>
+                  <div class="services-img">
+                      <img src="img/delivery.png" width="140" height="160" alt="Доставка">
+                  </div>
+                       </div>
               </div>
-              <div class="services-img">
-                  <img src="img/delivery.png" width="140" height="160" alt="Доставка">
-              </div>
-          </div>
-          <div class="brands-block clearfix">
+                 
+          </div>          
+          <div class="brands-block container clearfix">
               <img class="dji" src="img/brand-1.png" alt="DJI">
               <img class="sp" src="img/brand-2.png" alt="SP Gadgets">
               <img class="gopro" src="img/brand-3.png" alt="Go Pro">
               <img class="vive" src="img/brand-4.png" alt="VIVE">
           </div>
-          <div class="index-content clearfix">
+          <div class="index-content container clearfix">
               <div class="index-content-left">
                   <h3 class="index-content-title">О нас</h3>
                   <p>Огромный выбор гаджетов не оставит равнодушным гика,<br>который есть в каждом из нас.</p>
@@ -125,24 +146,24 @@
                       <li>Автотрейдинг</li>
                       <li>ЖелДорЭкспедиция</li>
                   </ul>
-                  <a class="btn" href="#">Подробнее о нас</a>
+                  <div class="btn-container"><a class="btn" href="#">Подробнее о нас</a></div>
               </div>
               <div class="index-content-right">
                   <h3>Контакты</h3>
                   <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете<br>проверить работоспособность покупки. Всякое бывает.</p>
-                  <a href="https://www.google.ru/maps"><img src="img/map.jpg" width="560" height="224" alt="Адрес на карте"></a>
-                  <a class="btn" href="#">Напишите нам</a>
+                  <img src="img/map.jpg" width="560" height="222" alt="Адрес на карте">
+                  <div class="btn-container"><a class="btn" href="#">Напишите нам</a></div>
               </div>
           </div>
-      </main>
+      
       <footer class="main-footer">
           <div class="container clearfix">              
               <div class="footer-top clearfix">
-                  <h2 class="logo">Device</h2>
-                  <ul class="breadcrumbs">
-                      <li><a class="login" href="#">Войти</a></li>
-                      <li><a class="compare" href="#">Сравнение</a></li>
-                      <li><a class="cart" href="#">Корзина</a></li>
+                  <h2 class="footer-logo"><a href="#">Device</a></h2>
+                  <ul class="breadcrumbs-footer">
+                      <li><a class="login-footer" href="#">Войти</a></li>
+                      <li><a class="compare-footer" href="#">Сравнение</a></li>
+                      <li><a class="cart-footer" href="#">Корзина</a></li>
                   </ul>
               </div>
               <div class="footer-second clearfix">
@@ -154,8 +175,10 @@
                   </ul>
                   <span class="footer-phone">Тел: +7 (495) 495-95-95</span>
               </div>
-              <div class="footer-third clearfix"></div>
+              <div class="footer-third clearfix">
+                  <div class="line-container">
                   <div class="footer-line">
+                  </div>
                   </div>
                   <div class="footer-social">
                       <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
@@ -163,10 +186,10 @@
                       <a class="social-btn social-btn-twi" href="#">Твиттер</a>
                   </div>
                   <div class="footer-copyright">
-                      <a href="https://htmlacademy.ru"><img src="img/#.png" width="20" height="30"></a>
-                  </div>            
-              
-              </div>            
+                      <a class="copyright icon-copyright" href="https://htmlacademy.ru"></a>
+                  </div>         
+              </div>
+            </div>            
           </footer>
     </body>
 </html>

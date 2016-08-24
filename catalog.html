@@ -7,23 +7,27 @@
   </head>
   <body>
       <header class="main-header">
-          <div class=container>
-              <h1 class="logo">Device</h1>
-              <div class="user-block">
-                  <ul>
-                      <li><input type="submit" value="Найти">
-                          <input class="search" type="search" placeholder="Поиск по сайту"></li>
-                      <li><a class="profile" href="#">Валентин Петухов</a></li>
-                          <a class="logout" href="#">Выйти</a>
+          
+          <div class="container">
+              <div class="yellow-bg">
+              <div class="header-wrapper">
+              <h1 class="logo"><a href="#">Device</a></h1>
+              <div class="user-block clearfix">
+                  <div class="search">
+                      <form name="search">                              
+                                  <input class="search-field" type="search" placeholder="Поиск по сайту">
+                                  <input class="find-btn" type="image" src="img/icon-search.png" value="Найти">
+                      </form>
+                  </div>
+                  <ul class="breadcrumbs">
+                      <li><a class="login" href="#">Войти</a></li>
                       <li><a class="compare" href="#">Сравнение</a></li>
                       <li><a class="cart" href="#">Корзина</a></li>
                   </ul>
-                  <nav class="main-navigation">
-                      <ul>
-                          <li>
-                              <a class="catalog" href="#">Каталог товаров</a>
-                              <!-- + пункты выпадающего меню -->
-                          </li>
+                  </div>
+                  <nav class="clearfix">
+                      <a class="catalog" href="#">Каталог товаров</a>
+                      <ul class="main-navigation">
                           <li>
                               <a class="delivery" href="#">Доставка</a>
                           </li>
@@ -35,8 +39,10 @@
                           </li>
                       </ul>
                   </nav>
-              </div>
+              
           </div>
+         </div>
+        </div>
       </header>
       <main class="container clearfix">
           <h2 class="category-title">Моноподы для селфи</h2>
@@ -45,76 +51,99 @@
                 <a href="#">Каталог товаров</a>
                 <a href="#">Моноподы для селфи</a>
           </span>
+          
+              <div class="filters-top clearfix">
+                  <div class="filters-word">
+                    <span>Фильтр:</span>
+                  </div>
+                  <div class="search-results-top">
+                    <span>Сортировка:
+                          <a class="sort-btn" href="#">По цене</a>
+                          <a class="sort-btn" href="#">По типу</a>
+                          <a class="sort-btn" href="#">По популярности</a>
+                      </span>
+                      <!-- + кнопки сортировки по возрастанию/убыванию -->
+                  </div>
+              </div>
           <div class="filters">
-              <form name="filtres">
-                  <p><b>Фильтр:</b></p>
-                  <fieldset>
+              <form name="filters">
+                  
+                  <fieldset disabled>
                      <legend class="price">Стоимость</legend>                         
                          <input class="price-range" type="range" min="0" max="20000" step="500" value="50">                     
                   </fieldset>
                   <fieldset>
                       <legend class="color">Цвет</legend>
-                         <label><input type="checkbox" name="color-check-1" value="">Черный</label><br>
-                         <label><input type="checkbox" name="color-check-2" value="">Белый</label><br>
-                         <label><input type="checkbox" name="color-check-3" value="">Синий</label><br>
-                         <label><input type="checkbox" name="color-check-4" value="">Красный</label><br>
-                         <label><input type="checkbox" name="color-check-5" value="">Розовый</label>
+                         <input type="checkbox" name="color-check-1" value="" id="check1" checked>
+                         <label for="check1">Черный</label><br>
+                         <input type="checkbox" name="color-check-2" value="" id="check2">
+                         <label for="check2">Белый</label><br>
+                         <input type="checkbox" name="color-check-3" value="" id="check3">
+                         <label for="check3">Синий</label><br>
+                         <input type="checkbox" name="color-check-4" value="" id="check4">
+                         <label for="check4">Красный</label><br>
+                         <input type="checkbox" name="color-check-5" value="" id="check5">
+                         <label for="check5">Розовый</label>
                   </fieldset>
-                  <fieldset>
-                      <legend class="bluetooth">Bluetooth</legend>
-                         <label><input type="radio" name="bt-radio-1" value="">Есть</label><br>
-                         <label><input type="radio" name="bt-radio-1" value="">Нет</label><br>
+                  <fieldset class="bluetooth">
+                      <legend>Bluetooth</legend>
+                         <input type="radio" name="bt-radio-1" value="" id="radio1">
+                         <label for="radio1">Есть</label><br>
+                         <input type="radio" name="bt-radio-1" value="" id="radio2">
+                         <label for="radio2">Нет</label><br>
                   </fieldset>
-                  <button class="btn" type="submit" value="">Показать</button>
+                  <button class="btn submit-btn" type="submit" value="">Показать</button>
+                  
               </form>
           </div>
           <div class="search-results">
-              
-              <div class="sort">
-                  <p>Сортировка:
-                      <a class="sort-btn" href="#">По цене</a>
-                      <a class="sort-btn" href="#">По типу</a>
-                      <a class="sort-btn" href="#">По популярности</a>
-                  </p>
-                  <!-- + кнопки сортировки по возрастанию/убыванию -->
-              </div>
               <article class="catalog-item">
                   <a href="#"><img src="img/item-1.jpg" width="360" height="380"></a>
-                  <p class="catalog-item-title">Любительская селфи-палка</p>
-                  <p class="catalog-item-price">500 руб.</p>
+                  <div class="item-info">
+                      <p class="catalog-item-title">Любительская селфи-палка</p>
+                      <p class="catalog-item-price">500 руб.</p>
+                  </div>
               </article>
               <article class="catalog-item">
                   <a href="#"><img src="img/item-2.jpg" width="360" height="380"></a>
+                  <div class="item-info">
                   <p class="catalog-item-title">Профессиональная селфи-палка</p>
                   <p class="catalog-item-price">1500 руб.</p>
+                  </div>
               </article>
               <article class="catalog-item">
                   <a href="#"><img src="img/item-3.jpg" width="360" height="380"></a>
+                  <div class="item-info">
                   <p class="catalog-item-title">Непотопляемая селфи-палка</p>
                   <p class="catalog-item-price">2500 руб.</p>
+                  </div>
               </article>
-              <article class="catalog-item">
-                  <a href="#"><img src="img/item-4.jpg" width="360" height="380"></a>
+              <article class="catalog-item new-item">
+                  <a  href="#"><img src="img/item-4.jpg" width="360" height="380"></a>
+                  <div class="item-info">
                   <p class="catalog-item-title">Селфи-палка «Следуй за мной»</p>
                   <p class="catalog-item-price">4900 руб.</p>
+                  </div>
               </article>
               <div class="page-nav">
-                  <a class="page-nav-btn" href="#">Назад</a>
-                  <a class="page-nav-btn" href="#">1</a>
-                  <a class="page-nav-btn" href="#">2</a>
-                  <a class="page-nav-btn" href="#">3</a>
-                  <a class="page-nav-btn" href="#">Вперед</a>
+                  <a class="page-nav-btn page-prev" href="#">Назад</a>
+                    <div class="page-number-wrapper">
+                      <a class="page-nav-btn page-number active" href="#">1</a>
+                      <a class="page-nav-btn page-number" href="#">2</a>
+                      <a class="page-nav-btn page-number" href="#">3</a>
+                    </div>
+                  <a class="page-nav-btn page-next" href="#">Вперед</a>
               </div>
           </div>
       </main>
       <footer class="main-footer">
           <div class="container clearfix">              
               <div class="footer-top clearfix">
-                  <h2 class="logo">Device</h2>
-                  <ul class="breadcrumbs">
-                      <li><a class="login" href="#">Войти</a></li>
-                      <li><a class="compare" href="#">Сравнение</a></li>
-                      <li><a class="cart" href="#">Корзина</a></li>
+                  <h2 class="footer-logo"><a href="#">Device</a></h2>
+                  <ul class="breadcrumbs-footer">
+                      <li><a class="login-footer" href="#">Войти</a></li>
+                      <li><a class="compare-footer" href="#">Сравнение</a></li>
+                      <li><a class="cart-footer" href="#">Корзина</a></li>
                   </ul>
               </div>
               <div class="footer-second clearfix">
@@ -126,8 +155,10 @@
                   </ul>
                   <span class="footer-phone">Тел: +7 (495) 495-95-95</span>
               </div>
-              <div class="footer-third clearfix"></div>
+              <div class="footer-third clearfix">
+                  <div class="line-container">
                   <div class="footer-line">
+                  </div>
                   </div>
                   <div class="footer-social">
                       <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
@@ -135,10 +166,10 @@
                       <a class="social-btn social-btn-twi" href="#">Твиттер</a>
                   </div>
                   <div class="footer-copyright">
-                      <a href="https://htmlacademy.ru"><img src="img/#.png" width="20" height="30"></a>
-                  </div>            
-              
-              </div>            
+                      <a class="copyright icon-copyright" href="https://htmlacademy.ru"></a>
+                  </div>         
+              </div>
+            </div>            
           </footer>
  </body>
 </html>
