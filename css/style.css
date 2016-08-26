@@ -14,6 +14,7 @@ body {
     
 }
 
+
 .sprite {
     background-image: url(spritesheet.png);
     background-repeat: no-repeat;
@@ -241,6 +242,18 @@ h3  {
 .search-field:focus::after {
     
 }
+
+/*
+.find-btn {
+    background-color: transparent;
+    border: 2px solid #000000;
+    outline: none;
+    width: 85px;
+    height: 50px;   
+}
+*/
+
+
 
 .breadcrumbs {
     float: right;
@@ -536,79 +549,118 @@ nav {
     width: 260px;
 }
 
-.slider-wrapper {
-    position: relative;
-    top: -75px
-}
+/*РАЗМЕТКА СЛАЙДЕРА----------------------------------------------------*/
 
-.index-slider {
-    width: 1000px;
+.slider {
+    width: 1072px;
     margin: 0 auto;
+    position: relative;
 }
 
-.index-slider-pic img {
-    float: left;
+.slide {
+    min-height: 490px;
+    background-repeat: no-repeat;
+    background-position: 5px 100%;
 }
 
-.slider-right {
-    float: right;
+.slide1 {
+    background-image: url("../img/slider-1.png");
+}
+
+.slide2 {
+    background-image: url("../img/slider-2.png");
+}
+
+.slide3 {
+    background-image: url("../img/slider-3.png");
+}
+
+.slide-text {
     width: 500px;
-    position: relative;
+    float: right;
 }
 
-.slider-right-elements {
-    position: relative;
-}
-
-.white-line {
-    background-color: #ffffff;
-    width: 100px;
-    height: 7px;
-    float: left;
-}
-
-.slider-number {
-    position: absolute;
-    right: 0;
-    top: -50px;
-    color: #ffffff;
-    line-height: 179px;
-    font-size: 179px;
+.slide-title {
+    font-size: 47px;
+    font-family: "Gilroy", "Arial", sans-serif;
     font-weight: bold;
-    font-family: "Gilroy", "Arial", sans-serif;
+    line-height: 47px;
 }
 
-.slider-title {
-    line-height: 50px;
-}
-
-.slider-description {
+.slide-text p {
     font-size: 15px;
-    line-height: 30px;
-    margin-bottom: 50px;
-}
-
-.slider-feature {
-    display: inline-block;
-    margin-top: 70px;
-    margin-right: 80px;
-}
-
-.slider-feature:last-child {
-    margin-right: 0;
-}
-
-
-.feature {
-    font-family: "Gilroy", "Arial", sans-serif;
-    font-size: 36px;
-}
-
-.slider-feature p {
     font-family: "Open Sans", "Arial", sans-serif;
-    font-size: 13px;
+    line-height: 30px;
     color: #464646;
 }
+
+.slider input[type="radio"] {
+    display: none;
+}
+
+.slider-controls {
+    position: relative;
+    text-align: center;
+    width: 500px;
+    margin-top: 55px;
+}
+
+.slider-controls a {
+    width: 200px;
+    float: left;
+}
+
+.toggles {
+    position: absolute;
+    right: 0;
+    top: 17px;
+}
+
+.toggles label {
+    display: inline-block;
+    vertical-align: top;
+    width: 5px;
+    height: 5px;
+    margin: 0 23px;
+    border: 3px solid #000000;
+    opacity: 0.3;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slider-controls label:hover {
+    opacity: 0.6;
+}
+
+.slider-controls label:active,
+.slider-controls label:checked {
+    opacity: 1;
+}
+
+.slider-controls {
+    position: absolute;
+    right: 0;
+    top: 40%;
+}
+
+.slide {
+    display: none;
+}
+
+#btn-1:checked ~ .slides .slide:nth-child(1) {
+  display: block;
+}
+
+#btn-2:checked ~ .slides .slide:nth-child(2) {
+  display: block;
+}
+
+#btn-3:checked ~ .slides .slide:nth-child(3) {
+  display: block;
+}
+
+
+/*------------------------------------*/
 
 .categories {    
     margin-top: 115px; 
@@ -657,7 +709,7 @@ nav {
 }
 
 
-/*------------------------------------*/
+
 
 .gray-bg {
     margin-top: 90px;
@@ -1112,8 +1164,28 @@ nav {
 
 .path {
     display: block;
-    position: relative;
     margin-bottom: 50px;
+    list-style: none;
+    padding-left: 0;
+}
+
+.path li {
+    display: inline-block;
+    position: relative;
+}
+
+.path li::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    right: 17px;
+    width: 4px;
+    height: 7px;
+    background: url("../img/icon-path.png") no-repeat;    
+}
+
+.path li:last-child::after {
+    background: none;
 }
 
 .path a {
@@ -1123,6 +1195,18 @@ nav {
     font-size: 14px;
     line-height: 36px;
     opacity: 0.3;
+}
+
+.path a:hover {
+    opacity: 0.6;
+}
+
+.path a:active {
+    opacity: 0.1;
+}
+
+.filters-top-bg {
+    background-color: #ebebeb;
 }
 
 .filters-top {
@@ -1184,18 +1268,99 @@ nav {
     opacity: 1;
 }
 
+.sort-buttons {
+    float: right;
+}
+
+.sort-buttons a {
+    padding: 0;
+}
+
+.sort-buttons a:first-child {
+    padding-left: 0;
+}
+
+.sort-buttons a:last-child {
+    margin-left: 10px;
+}
+
 .filters {
     position: relative;
     float: left;
     width: 200px;
 }
 
+.filters legend {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: "Gilroy", "Arial", sans-serif;
+    color: #000000;
+    margin-bottom: 25px;
+}
+
+
+
+/*
 .filters p {
     width: 270px;
     height: 70px;
     text-transform: uppercase;
     font-weight: bold;
     font-family: "Gilroy", "Arial", sans-serif;
+    background-color: #efefef;
+}
+*/
+
+.price-range {
+    width: 200px;
+    margin-bottom: 10px;
+    padding: 0;
+}
+
+.range-controls {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.range-controls .scale {
+    height: 2px;
+    background-color: #dbdbdb;
+}
+
+.range-controls .bar {
+    height: 2px;
+    width: 70%;
+    background-color: #91c92f;
+}
+
+.range-controls .toggle {
+    position: absolute;
+    top: -7px;
+    left: 0;
+    width: 14px;
+    height: 14px;
+    border: 2px solid #000000;
+    border-radius: 50%;
+    background-color: #eeeeee;
+    cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 0;
+}
+
+.range-controls .toggle-max {
+  left: 130px;
+}
+
+.price-controls {
+    opacity: 0.2;
+}
+
+.price-controls input {
+    border: none;
+    background-color: transparent;
+    width: 70px;
 }
 
 input[type="checkbox"] {
@@ -1204,7 +1369,6 @@ input[type="checkbox"] {
 
 input[type="checkbox"] + label {
     display: block;
-    margin 10px 0;
     line-height: 20px;
     padding-left: 45px;
     position: relative;
@@ -1270,10 +1434,20 @@ input[type="radio"]:checked + label::after {
     background-position: -5px -610px;
 }
 
-fieldset {
+.filters {
+    margin-top: 70px;
+    border-top: 2px solid #000000;
+}
+
+.filters fieldset {
     border: none;
     border-bottom: 2px solid #000000;
     margin-bottom: 12px;
+    padding: 0;
+}
+
+.filters legend:first-child {
+    padding-top: 25px;
 }
 
 fieldset label:last-child {
@@ -1301,12 +1475,67 @@ fieldset label:last-child {
 .catalog-item {
     display: inline-block;
     position: relative;
-    
+    margin-top: 70px;
 }
 
-.catalog-item a {
-    display: inline-block;
-    position: relative;
+.item-actions {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 360px;
+    height: 380px;
+    text-align: center;
+    color: black;
+    opacity: 0;
+}
+
+.catalog-item:hover .item-actions {
+    cursor: pointer;
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.item-actions a {
+    display: block;
+    width: 200px;
+    top: 160px;
+    left: 90px;
+    z-index: 2;
+}
+
+.item-btn {
+    width: 200px;
+    opacity: 2;
+}
+
+.item-btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: #f0c52e;
+    top: 16px;
+    bottom: 16px;
+    transition-duration: 0.25s;
+    transition-property: top bottom;
+    z-index: -1;
+}
+
+.to-compare {
+    display: block;
+    font-size: 13px;
+    color: #000000;
+    opacity: 1;
+    font-family: "Open Sans", sans-serif;
+    text-decoration: none;
+    line-height: 36px;
+    margin-top: 160px;
+    margin-left: 90px;
+}
+
+
+.item-image {
+    overflow: hidden;
     width: 360px;
     height: 380px;
 }
@@ -1325,7 +1554,6 @@ fieldset label:last-child {
 
 .catalog-item:nth-child(odd) {
     margin-right: 36px;
-    margin-bottom: 55px;
 }
 
 .item-info {
@@ -1348,6 +1576,7 @@ fieldset label:last-child {
 }
 
 .page-nav {
+    margin-top: 55px;
     width: 760px;
     height: 70px;
     background-color: #ebebeb;
