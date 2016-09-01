@@ -27,7 +27,25 @@
                   </ul>
                   </div>
                   <nav class="clearfix">
-                      <a class="catalog" href="#">Каталог товаров</a>
+                      <ul class="catalog-navigation">
+                          <li>
+                              <a class="catalog" href="#">Каталог товаров</a>
+                              <ul class="catalog-drop">
+                                  <div class="column-1">
+                                      <li><a href="#">Виртуальная реальность</a></li>
+                                      <li><a href="#">Моноподы для селфи</a></li>
+                                      <li><a href="#">Экшн-камеры</a></li>
+                                  </div>
+                                  <div class="column-2">
+                                      <li><a href="#">Фитнес-браслеты</a></li>
+                                      <li><a href="#">Умные часы</a></li>
+                                  </div>
+                                  <div class="column-3">
+                                      <li><a href="#">Квадрокоптеры</a></li>
+                                  </div>
+                              </ul>
+                          </li>
+                      </ul>
                       <ul class="main-navigation">
                           <li>
                               <a class="delivery" href="#">Доставка</a>
@@ -240,7 +258,7 @@
                   <h3>Контакты</h3>
                   <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете<br>проверить работоспособность покупки. Всякое бывает.</p>
                   <img src="img/map.jpg" width="560" height="222" alt="Адрес на карте">
-                  <div class="btn-container"><a class="btn" href="#">Напишите нам</a></div>
+                  <div class="btn-container"><a class="btn write-us-btn" href="#">Напишите нам</a></div>
               </div>
           </div>
       
@@ -279,5 +297,44 @@
               </div>
             </div>            
           </footer>
+          <div class="modal-content">
+              <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+              <div class="modal-content-inside">
+                  <form class="write-us-form" action="https://echo.htmlacademy.ru" method="post">
+                      <div class="write-us-name-wrapper">
+                      <label for="write-us-name">Ваше имя</label>
+                      <input id="write-us-name" class="write-us-name" type="text" placeholder="Представьтесь, пожалуйста">
+                      </div>
+                      <div class="write-us-email-wrapper">
+                      <label for="write-us-email">Ваш e-mail</label>
+                      <input id="write-us-email" class="write-us-email" type="text" placeholder="Для отправки ответа">
+                      </div>
+                      <div class="write-us-text-wrapper">
+                      <label for="write-us-text" class="label-text-area">Текст письма</label>
+                      <textarea id="write-us-text" class="write-us-text" placeholder="В свободной форме">
+                      </textarea>
+                      </div>
+                      <button type="submit" class="btn submit-btn">Отправить</button>
+                  </form>
+              </div>
+          </div>
+    <script>
+        var writeUs = document.querySelector(".write-us-btn");
+        
+        var popup = document.querySelector(".modal-content");
+        
+        var popupClose = document.querySelector(".modal-content-close");
+        
+        writeUs.addEventListener("click", function(event) {
+            event.preventDefault();
+            popup.classList.add("modal-content-show");
+        });
+        
+        popupClose.addEventListener("click", function(event){
+            event.preventDefault();
+            popup.classList.remove("modal-content-show");
+        });
+        
+    </script>
     </body>
 </html>
