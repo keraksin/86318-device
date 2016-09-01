@@ -47,13 +47,19 @@
       <main class="container">
           <!--  СЛАЙДЕР  -->
           <div class="slider">
+            
             <input type="radio" id="btn-1" name="toggle" checked>
             <input type="radio" id="btn-2" name="toggle">
             <input type="radio" id="btn-3" name="toggle">
             
-            <div class="slides">                
+            <div class="slides">
+                
                 <div class="slide slide1">
                     <div class="slide-text">
+                        <div class="elements">
+                            <div class="slide-line"></div>
+                            <div class="slide-number">01</div>
+                        </div>
                         <div class="slide-title">Делай селфи,<br>как Бен Стиллер!</div>                
                         <p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) 
                         метров длиной и весом всего 5 килограмм.</p>
@@ -65,11 +71,29 @@
                             <label for="btn-3"></label>
                         </div>
                         </div>
+                        <div clas="slide-features">
+                            <div class="slide-feature">
+                                <p>8,5 м</p>
+                                <p>Длина палки</p>
+                            </div>
+                            <div class="slide-feature">
+                                <p>5 кг</p>
+                                <p>Вес палки</p>
+                            </div>
+                            <div class="slide-feature">
+                                <p>Карбон</p>
+                                <p>Материал</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="slide slide2">
                     <div class="slide-text">
-                        <div class="slide-title">Худеем правильно!</div>                   
+                        <div class="elements">
+                            <div class="slide-line"></div>
+                            <div class="slide-number">02</div>
+                        </div>
+                        <div class="slide-title">Худеем<br>правильно!</div>                   
                         <p>Мотивирующие фитнес-браслеты помогут найти в себе силы 
                         не пропускать занятия и соблюдать диету.</p>
                         <div class="slider-controls">
@@ -80,10 +104,20 @@
                             <label for="btn-3"></label>
                         </div>
                         </div>
+                        <div clas="slide-features">
+                            <div class="slide-feature">
+                                <p>48 часов</p>
+                                <p>Без подзарядки</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="slide slide3">
                     <div class="slide-text">
+                        <div class="elements">
+                            <div class="slide-line"></div>
+                            <div class="slide-number">03</div>
+                        </div>
                         <div class="slide-title">Порхает, как бабочка,<br>жалит, как пчела!</div>      
                         <p>Этот обычный, на первый взгляд, квадрокоптер оснащен 
                         мощным лазером, замаскированным под стандартную камеру.</p>
@@ -93,7 +127,17 @@
                             <label for="btn-1"></label>
                             <label for="btn-2"></label>
                             <label for="btn-3"></label>
+                        </div>                        
                         </div>
+                        <div clas="slide-features">
+                            <div class="slide-feature">
+                                <p>800 м</p>
+                                <p>Дальность полета</p>
+                            </div>
+                            <div class="slide-feature">
+                                <p>40 м</p>
+                                <p>Радиус поражения</p>
+                            </div>
                         </div>
                     </div>
                 </div>              
@@ -128,23 +172,49 @@
           </main>
           <div class="gray-bg">
               <div class="services container clearfix">
+                  <input type="radio" id="sbtn-1" name="stoggle" class="stoggle" checked>
+                  <input type="radio" id="sbtn-2" name="stoggle" class="stoggle">
+                  <input type="radio" id="sbtn-3" name="stoggle" class="stoggle">
+                  
                   <div class="serv-wrapper">
-                  <div class="services-btn">
-                      <ul>
-                      <li class="btn-container"><a class="btn serv-btn" href="#">Доставка</a></li>
-                      <li class="btn-container"><a class="btn serv-btn" href="#">Гарантия</a></li>
-                      <li class="btn-container"><a class="btn serv-btn" href="#">Кредит</a></li>
-                      </ul>                  
+                      <div class="services-btn">
+                          <ul>
+                              <li><label for="sbtn-1" class="btn sbtn-1">Доставка</label></li>
+                              <li><label for="sbtn-2" class="btn sbtn-2">Гарантия</label></li>
+                              <li><label for="sbtn-3" class="btn sbtn-3">Кредит</label></li>
+                          </ul>                  
+                      </div>
+                      <div class="vertical-line"></div>
+                      <div class="services-slides">
+                          <div class="services-slide" id="services-slide-1">
+                              <div class="services-info">
+                                  <div class="services-title">Доставка</div>
+                                  <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+                              </div>
+                              <div class="services-image">
+                                  <img src="img/delivery.png">
+                              </div>
+                          </div>
+                          <div class="services-slide" id="services-slide-2">
+                              <div class="services-info">
+                                  <div class="services-title">Гарантия</div>
+                                  <p>Если из-за возгарания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+                              </div>
+                              <div class="services-image">
+                                  <img src="img/warranty.png">
+                              </div>
+                          </div>
+                          <div class="services-slide" id="services-slide-3">
+                              <div class="services-info">
+                                  <div class="services-title">Кредит</div>
+                                  <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
+                              </div>
+                              <div class="services-image">
+                                  <img src="img/credit.png">
+                              </div>
+                          </div>
+                      </div>
                   </div>
-                  <div class="vertical-line"></div>
-                  <div class="services-info">
-                      <h3>Доставка</h3>
-                      <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
-                  </div>
-                  <div class="services-img">
-                      <img src="img/delivery.png" width="140" height="160" alt="Доставка">
-                  </div>
-                       </div>
               </div>
                  
           </div>          

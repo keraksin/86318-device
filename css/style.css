@@ -257,7 +257,7 @@ h3  {
 
 .breadcrumbs {
     float: right;
-    min-width: 500px;
+    width: 500px;
     font-size: 0;
     margin: 0;
     padding: 0;
@@ -284,12 +284,13 @@ h3  {
 .breadcrumbs li:nth-child(1) {    
     display: block;
     float: left;
+    padding-left: 20px;
 }
 
 .breadcrumbs li:nth-child(2) {
     display: block;
     float: left;
-    margin-left: 250px;
+    margin-left: 200px;
 }
 
 .breadcrumbs li:last-child {
@@ -309,7 +310,7 @@ h3  {
 
 .cart {
     position: relative;
-    
+    padding-right: 5px;
 }
 
 .cart::before {
@@ -358,17 +359,21 @@ h3  {
 nav {
     margin-bottom: 60px;
     min-height: 20px;
+    width: 1040px;
 }
 
 .main-navigation {
+    width: 500px;
     display: block;
     float: right;
+    text-align: left;
     font-size: 0;
     margin: 0;
     padding: 0;
+    
     text-decoration: none;
-    list-style: none;
-    min-width: 
+    list-style: none; 
+    text-align: right;
 }
 
 .main-navigation li {
@@ -378,6 +383,7 @@ nav {
     text-transform: uppercase;
     display: inline-block;
     vertical-align: top;
+    margin-left: 30px;
 }
 
 .main-navigation a {
@@ -395,13 +401,13 @@ nav {
 }
 
 .main-navigation li:first-child {
-    margin-right: 60px;
+    margin-left: 0;
 }
 
 .catalog {
     position: relative;
     float: left;
-    margin-right: 300px;
+    
     font-size: 18px;
     font-family: "Gilroy", "Arial", sans-serif;
     font-weight: bold;
@@ -437,13 +443,22 @@ nav {
 }
 
 .delivery {
-    margin-right: 40px;
+    
 }
 
 .warranty {
-    margin-right: 100px;
+    margin-left: 10px;
 }
 
+.contacts {
+    padding-right: 5px;
+    margin-left: 100px;
+}
+
+.main-navigation:first-child {
+    display: inline-block;
+    float: left;
+}
 
 .container {
     width: 1160px;
@@ -514,36 +529,6 @@ nav {
     height: 40px;
 }
 
-.serv-btn {
-    width: 160px;
-}
-
-.serv-btn:hover::before {
-    width: 280px;
-    color: #f0c52e;
-    background-color: #000000;
-    transition-duration: 0.25s;
-    transition-property: top bottom;
-    
-}
-
-.services-btn ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.services-btn li {
-    margin-bottom: 25px;
-}
-
-.services-btn a {
-    z-index: 0;
-}
-
-.services-btn a:hover {
-    color: #f0c52e;
-}
 
 .index-content .btn {
     width: 260px;
@@ -552,15 +537,47 @@ nav {
 /*РАЗМЕТКА СЛАЙДЕРА----------------------------------------------------*/
 
 .slider {
-    width: 1072px;
+    width: 1040px;
     margin: 0 auto;
     position: relative;
+    top: -30px;
+}
+
+.elements {
+    position: relative;
+    
+}
+
+.slide-line {
+    position: absolute;
+    top: -45px;
+    left: 0;
+    display: inline-block;
+    width: 100px;
+    height: 7px;
+    background-color: #ffffff;
+}
+
+.slide-number {
+    position: absolute;
+    top: -95px;
+    right: 0;
+    display: inline-block;
+    font-size: 179px;
+    color: #ffffff;
+    font-family: "Gilroy", "Arial", sans-serif;
+    font-weight: bold;
+    line-height: 179px;
+    text-align: right;
+    letter-spacing: 0;
 }
 
 .slide {
-    min-height: 490px;
+    min-height: 485px;
     background-repeat: no-repeat;
-    background-position: 5px 100%;
+    background-position: 0 0;
+    transition: left 0.5s ease;
+    z-index: 2000;
 }
 
 .slide1 {
@@ -638,9 +655,43 @@ nav {
 }
 
 .slider-controls {
-    position: absolute;
+    position: relative;
+    width: 500px;
+    height: 40px;
     right: 0;
     top: 40%;
+}
+
+.slider-controls a {
+    position: absolute;
+    left: 0;
+}
+
+.toggles {
+    position: absolute;
+    right: 0;
+}
+
+.slide-feature {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 65px;
+    margin-right: 25px;
+}
+
+.slide-feature p:nth-child(1) {
+    font-size: 36px;
+    font-family: "Gilroy", "Arial", sans-serif;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.slide-feature p:nth-child(2) {
+    font-size: 13px;
+    font-family: "Open Sans", "Arial", sans-serif;
+    line-height: 20px;
+    letter-spacing: 1px;
+    color: #464646;
 }
 
 .slide {
@@ -658,8 +709,6 @@ nav {
 #btn-3:checked ~ .slides .slide:nth-child(3) {
   display: block;
 }
-
-
 /*------------------------------------*/
 
 .categories {    
@@ -709,32 +758,38 @@ nav {
 }
 
 
-
+/*ВТОРОЙ СЛАЙДЕР*/
 
 .gray-bg {
     margin-top: 90px;
     background-color: #e5e5e5;
     max-height: 290px;
+    z-index: -2;
 }
 
 .serv-wrapper {
     position: relative;
     top: -100px;
+    z-index: 0;
 }
 
 .services {
     margin-bottom: 100px;
 }
 
-.services h3 {
-    margin-top: 0;
-    margin-top: 5px;
-}
-
 .services-btn {
     float: left;
     margin-top: 80px;
     width: 280px;
+    z-index: 10;
+}
+
+.services-btn .btn:active::before {
+    width: 280px;
+    color: #f0c52e;
+    background-color: #000000;
+    transition-duration: 0.25s;
+    transition-property: top bottom;
 }
 
 .vertical-line {
@@ -753,7 +808,23 @@ nav {
     max-width: 500px;
 }
 
-.services-img {
+.services-title {
+    margin-top: 0;
+    margin-top: 5px;
+    margin-bottom: 25px;
+    font-family: "Gilroy", "Arial", sans-serif;
+    font-size: 47px;
+    font-weight: bold;
+}
+
+.services-info p {
+    font-size: 15px;
+    font-family: "Open Sans", "Arial", sans-serif;
+    line-height: 30px;
+    font-weight: lighter;
+}
+
+.services-image {
     float: right;
     margin-top: 80px;
     margin-left: 10px;
@@ -763,6 +834,74 @@ nav {
 .service-btn .btn {
     background-color: #f0c52e;
 }
+
+.serv-btn {
+    width: 160px;
+}
+
+.serv-btn:hover::before {
+    width: 280px;
+    color: #f0c52e;
+    background-color: #000000;
+    transition-duration: 0.25s;
+    transition-property: top bottom;
+}
+
+#sbtn-1:checked ~ .serv-wrapper .sbtn-1 {
+    width: 280px;
+    background-color: #000;
+    color: #f0c52e;
+}
+
+#sbtn-2:checked ~ .serv-wrapper .sbtn-2 {
+    width: 280px;
+    background-color: #000;
+    color: #f0c52e;
+}
+
+#sbtn-3:checked ~ .serv-wrapper .sbtn-3 {
+    width: 280px;
+    background-color: #000;
+    color: #f0c52e;
+}
+
+.services-btn ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.services-btn li {
+    margin-bottom: 25px;
+}
+
+.services-btn a {
+    z-index: 0;
+}
+
+.services-btn a:hover {
+    color: #f0c52e;
+}
+
+
+.services-slide {
+    display: none;
+}
+
+#sbtn-1:checked ~ .serv-wrapper .services-slide:nth-child(1) {
+  display: block;
+}
+
+#sbtn-2:checked ~ .serv-wrapper .services-slide:nth-child(2) {
+  display: block;
+}
+
+#sbtn-3:checked ~ .serv-wrapper .services-slide:nth-child(3) {
+  display: block;
+}
+
+
+/*---------------------------------------------*/
 
 .brands-block {
     margin-left: auto;
@@ -1162,6 +1301,14 @@ nav {
 
 /* CATALOG.HTML */
 
+/*
+.body-catalog {
+    background: linear-gradient(to left, #ffffff 70%, #efefef 30%);
+    background-position: top center;
+    background-size: auto, 1000px;
+}
+*/
+
 .path {
     display: block;
     margin-bottom: 50px;
@@ -1206,10 +1353,12 @@ nav {
 }
 
 .filters-top-bg {
-    background-color: #ebebeb;
+    background-color: rgba(0, 0, 0, 0.08);
 }
 
-.filters-top {
+.catalog-wrapper {
+    background: linear-gradient(to left, #ffffff 70%, #efefef 30%);
+    z-index: -10;
     
 }
 
@@ -1227,6 +1376,11 @@ nav {
     text-transform: uppercase;
     letter-spacing: 3px;
 }
+
+.filters {
+    
+}
+
 
 .search-results-top {
     width: 760px;
@@ -1464,6 +1618,7 @@ fieldset label:last-child {
     width: 200px;
     background-color: transparent;
     cursor: pointer;
+    z-index: 1;
 }
 
 .search-results {
