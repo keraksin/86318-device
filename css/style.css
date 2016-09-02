@@ -679,12 +679,17 @@ nav {
     cursor: pointer;
 }
 
-.slider-controls label:hover {
+.toggles label:hover {
     opacity: 0.6;
 }
 
-.slider-controls label:active,
-.slider-controls label:checked {
+.toggles label:active {
+    opacity: 1;
+}
+
+#btn-1:checked ~ .slider-controls label[for="btn-1"],
+#btn-2:checked ~ .slider-controls label[for="btn-2"],
+#btn-3:checked ~ .slider-controls label[for="btn-3"] {
     opacity: 1;
 }
 
@@ -699,11 +704,6 @@ nav {
 .slider-controls a {
     position: absolute;
     left: 0;
-}
-
-.toggles {
-    position: absolute;
-    right: 0;
 }
 
 .slide-feature {
@@ -1411,11 +1411,6 @@ nav {
     letter-spacing: 3px;
 }
 
-.filters {
-    
-}
-
-
 .search-results-top {
     width: 760px;
     height: 70px;
@@ -1848,11 +1843,27 @@ fieldset label:last-child {
 }
 
 
-/*popup - write us*/
+/*popup - write us/map */
+.modal-content-map {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
+  display: none;
+  width: 960px;
+  height: 560px;
+  margin-top: -280px;
+  margin-left: -480px;
+
+  background: #e9e5dc url("../img/map-big.jpg");
+  border: 7px solid white;
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+}
+
 .modal-content {
     display: none;
     position: absolute;
-    top: 1850px;
+    top: 240%;
     left: 50%;
     margin-left: -480px;
     width: 960px;

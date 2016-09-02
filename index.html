@@ -122,7 +122,7 @@
                             <label for="btn-3"></label>
                         </div>
                         </div>
-                        <div clas="slide-features">
+                        <div class="slide-features">
                             <div class="slide-feature">
                                 <p>48 часов</p>
                                 <p>Без подзарядки</p>
@@ -257,7 +257,7 @@
               <div class="index-content-right">
                   <h3>Контакты</h3>
                   <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете<br>проверить работоспособность покупки. Всякое бывает.</p>
-                  <img src="img/map.jpg" width="560" height="222" alt="Адрес на карте">
+                  <a class="js-open-map" href="#"><img src="img/map.jpg" width="560" height="222" alt="Адрес на карте"></a>
                   <div class="btn-container"><a class="btn write-us-btn" href="#">Напишите нам</a></div>
               </div>
           </div>
@@ -311,12 +311,15 @@
                       </div>
                       <div class="write-us-text-wrapper">
                       <label for="write-us-text" class="label-text-area">Текст письма</label>
-                      <textarea id="write-us-text" class="write-us-text" placeholder="В свободной форме">
-                      </textarea>
+                      <textarea id="write-us-text" class="write-us-text" placeholder="В свободной форме"></textarea>
                       </div>
                       <button type="submit" class="btn submit-btn">Отправить</button>
                   </form>
               </div>
+          </div>
+          <div class="modal-content-map">
+              <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1125488779976!2d37.52742931603996!3d55.68703098053581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1472743752335" width="960" height="560" frameborder="0" style="border:0" allowfullscreen></iframe>
           </div>
     <script>
         var writeUs = document.querySelector(".write-us-btn");
@@ -335,6 +338,33 @@
             popup.classList.remove("modal-content-show");
         });
         
+        
+        
+        // ОЖИВЛЕНИЕ КАРТЫ
+        
+       
+      var mapOpen = document.querySelector(".js-open-map");
+
+      var mapPopup = document.querySelector(".modal-content-map");
+      var mapClose = mapPopup.querySelector(".modal-content-close");
+
+      mapOpen.addEventListener("click", function(event) {
+        event.preventDefault();
+        mapPopup.classList.add("modal-content-show");
+      });
+
+      mapClose.addEventListener("click", function(event) {
+        event.preventDefault();
+        mapPopup.classList.remove("modal-content-show");
+      });
+
+      window.addEventListener("keydown", function(event) {
+        if (event.keyCode === 27) {
+          if (mapPopup.classList.contains("modal-content-show")) {
+            mapPopup.classList.remove("modal-content-show");
+          }
+        }
+      });
     </script>
     </body>
 </html>
