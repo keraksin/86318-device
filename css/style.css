@@ -214,16 +214,22 @@ h3  {
 }
 
 .user-block {
-    margin-bottom: 45px;
+    margin-bottom: 35px;
 }
 
 .search {
-/*    width: 300px;*/
+    position: relative;
+    width: 500px;
     float: left;
 }
 
+.search-form > label {
+    cursor: pointer;
+    vertical-align: middle;
+}
 
 .search-field {
+    width: 440px;
     border: none;
     opacity: 0.3;
     margin-left: 10px;
@@ -239,8 +245,33 @@ h3  {
     padding-bottom: 5px;
 }
 
-.search-field:focus::after {
-    
+.search-btn {
+    display: none;
+    position: absolute;
+    top: -18px;
+    left: 355px;
+    width: 85px;
+    height: 50px;
+    color: #000000;
+    border: 2px solid #000000;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.search-btn:hover {
+    color: #ffffff;
+    background-color: #000000;
+    cursor: pointer;
+}
+
+.search-btn:active {
+    color: #747474;
+}
+
+.search-field:focus ~ .search-btn {
+    display: inline;
+/*    left: 355px;*/
 }
 
 .breadcrumbs {
@@ -278,7 +309,7 @@ h3  {
 .breadcrumbs li:nth-child(2) {
     display: block;
     float: left;
-    margin-left: 200px;
+    margin-left: 165px;
 }
 
 .breadcrumbs li:last-child {
@@ -345,7 +376,6 @@ h3  {
 }
 
 nav {
-    margin-bottom: 60px;
     min-height: 20px;
     width: 1040px;
 }
@@ -353,10 +383,12 @@ nav {
 .catalog-navigation {
     position: relative;
     list-style: none;
+    padding-left: 3px;
 }
 
 .catalog-drop {
     position: absolute;
+    padding-left: 3px;
     top: -9999em;
     left: 0;
     width: 1040px;
@@ -394,6 +426,8 @@ nav {
 .catalog-drop .column-3 {
     float: left;
     margin-right: 50px;
+    list-style: none;
+    padding-left: 0;
 }
 
 .main-navigation {
@@ -450,7 +484,7 @@ nav {
     vertical-align: top;
     text-decoration: none;
     color: #000000;
-    letter-spacing: 2px;
+    letter-spacing: 4px;
 }
 
 .catalog::after {
@@ -477,16 +511,18 @@ nav {
 }
 
 .delivery {
-    
+    letter-spacing: 4px;
 }
 
 .warranty {
     margin-left: 10px;
+    letter-spacing: 4px;
 }
 
 .contacts {
     padding-right: 5px;
     margin-left: 100px;
+    letter-spacing: 4px;
 }
 
 .main-navigation:first-child {
@@ -505,6 +541,7 @@ nav {
     background-size: cover;
     height: 300px;
     margin-top: 40px;
+    z-index: -10;
 }
 
 .header-wrapper {
@@ -513,13 +550,6 @@ nav {
     padding-left: 60px;
     padding-right: 60px;
 }
-
-
-
-
-
-
-/*_______________________________*/
 
 .btn {
     color: #000000;
@@ -574,7 +604,8 @@ nav {
     width: 1040px;
     margin: 0 auto;
     position: relative;
-    top: -30px;
+    top: -35px;
+    bottom: 0;
 }
 
 .elements {
@@ -610,23 +641,25 @@ nav {
     min-height: 485px;
     background-repeat: no-repeat;
     background-position: 0 0;
-    transition: left 0.5s ease;
     z-index: 2000;
 }
 
-.slide1 {
-    background-image: url("../img/slider-1.png");
+.slider-image {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    top: -75px;
+    left: 30px;
 }
 
-.slide2 {
-    background-image: url("../img/slider-2.png");
-}
-
-.slide3 {
-    background-image: url("../img/slider-3.png");
+.slider-image-3 {
+    top: -25px;
+    left: 1px;
 }
 
 .slide-text {
+    position: relative;
+    top: 6px;
     width: 500px;
     float: right;
 }
@@ -635,7 +668,7 @@ nav {
     font-size: 47px;
     font-family: "Gilroy", "Arial", sans-serif;
     font-weight: bold;
-    line-height: 47px;
+    line-height: 55px;
 }
 
 .slide-text p {
@@ -653,12 +686,13 @@ nav {
     position: relative;
     text-align: center;
     width: 500px;
-    margin-top: 55px;
+    margin-top: 45px;
 }
 
 .slider-controls a {
-    width: 200px;
+    width: 220px;
     float: left;
+    letter-spacing: 3px;
 }
 
 .toggles {
@@ -670,9 +704,9 @@ nav {
 .toggles label {
     display: inline-block;
     vertical-align: top;
-    width: 5px;
-    height: 5px;
-    margin: 0 23px;
+    width: 4px;
+    height: 4px;
+    margin: 0 14px;
     border: 3px solid #000000;
     opacity: 0.3;
     border-radius: 50%;
@@ -687,9 +721,15 @@ nav {
     opacity: 1;
 }
 
-#btn-1:checked ~ .slider-controls label[for="btn-1"],
-#btn-2:checked ~ .slider-controls label[for="btn-2"],
-#btn-3:checked ~ .slider-controls label[for="btn-3"] {
+.slider-controls .slide1-checked {
+    opacity: 1;
+}
+
+.slider-controls .slide2-checked {
+    opacity: 1;
+}
+
+.slider-controls .slide3-checked {
     opacity: 1;
 }
 
@@ -709,15 +749,15 @@ nav {
 .slide-feature {
     display: inline-block;
     vertical-align: top;
-    margin-top: 65px;
-    margin-right: 25px;
+    margin-top: 25px;
+    margin-right: 65px;
 }
 
 .slide-feature p:nth-child(1) {
     font-size: 36px;
     font-family: "Gilroy", "Arial", sans-serif;
     color: #000000;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .slide-feature p:nth-child(2) {
@@ -746,7 +786,7 @@ nav {
 /*------------------------------------*/
 
 .categories {    
-    margin-top: 115px; 
+/*    margin-top: 30px; */
     
 }
 
@@ -772,17 +812,18 @@ nav {
 }
 
 .categories-item {    
-    margin-bottom: 190px;    
+    margin-bottom: 160px;    
 }
 
 .categories-item a {
     display: block;
+    margin-bottom: 20px;
     float: left;
     color: #000000;
     font-size: 18px;
+    line-height: 20px;
     font-family: "Gilroy", "Arial", sans-serif;
     font-weight: bold;
-    
     text-decoration: none;
     
 }
@@ -808,7 +849,7 @@ nav {
 }
 
 .services {
-    margin-bottom: 100px;
+    margin-bottom: 90px;
 }
 
 .services-btn {
@@ -843,9 +884,8 @@ nav {
 }
 
 .services-title {
-    margin-top: 0;
     margin-top: 5px;
-    margin-bottom: 25px;
+    margin-bottom: 45px;
     font-family: "Gilroy", "Arial", sans-serif;
     font-size: 47px;
     font-weight: bold;
@@ -860,8 +900,8 @@ nav {
 
 .services-image {
     float: right;
-    margin-top: 80px;
-    margin-left: 10px;
+    margin-top: 85px;
+    margin-right: 65px;
 }
 
 
@@ -969,6 +1009,10 @@ nav {
     background: url("../img/brand-4-hvr.png");
 }
 
+.index-content h3 {
+    margin-bottom: 55px;
+}
+
 .index-content p {
     font: inherit;
     line-height: 30px;
@@ -977,10 +1021,17 @@ nav {
 
 
 .index-content-left ul {
+    margin-top: 62px;
     font-weight: bold;
     font-family: "Gilroy", "Arial", sans-serif;
     font-size: 16px;
-    line-height: 40px;    
+    line-height: 40px;
+    padding-left: 20px;
+    list-style-image: url("../img/icon-ul.png");
+}
+
+.index-content-left li {
+    padding-left: 18px;
 }
 
 .index-content-left {
@@ -988,11 +1039,11 @@ nav {
     float: left;
     width: 500px;
     margin-right: 100px;
-    min-height: 588px;
+    min-height: 560px;
 }
 
 .index-content-left > p {
-    margin-bottom: 40px;
+    margin-bottom: 35px;
 }
 
 
@@ -1000,7 +1051,7 @@ nav {
     position: relative;
     float: right;
     width: 560px;
-    min-height: 588px;
+    min-height: 560px;
 }
 
 .index-content-right > p {
@@ -1011,9 +1062,11 @@ nav {
     margin-bottom: 80px;
 }
 
+/*
 .index-content {
     margin-bottom: 90px;
 }
+*/
 
 .index-content .btn-container {
     position: absolute;
@@ -1022,6 +1075,7 @@ nav {
 
 .index-content a {    
     line-height: 40px;
+    letter-spacing: 3px;
 }
 
 .index-content .btn {
@@ -1031,19 +1085,23 @@ nav {
 .main-footer {
     height: 325px;
     background-color: #464646;
-    margin-top: 75px;
+    margin-top: 80px;
+}
+
+.main-footer-catalog {
+    margin-top: 0;
 }
 
 .footer-top {
     padding-top: 60px;
-    margin-bottom: 25px;
+    margin-bottom: 0;
 }
 
 
 .footer-logo {
     float: left;
     width: 160px;
-    margin-top: 0;
+    margin-top: 10px;
     font-size: 48px;
 }
 
@@ -1160,6 +1218,7 @@ nav {
     float: left;
     font-size: 18px;
     margin-right: 35px;
+    letter-spacing: 3px;
 }
 
 .footer-nav li:last-child {
@@ -1187,13 +1246,20 @@ nav {
     color: #ffffff;
 }
 
+.footer-second {
+    margin-bottom: 50px;
+}
+
 .footer-social {
     float: left;
+    padding-left: 25px;
 }
 
 .social-btn {
     display: inline-block;
-    vertical-align: top;
+    vertical-align: bottom;
+    margin-right: 10px;
+    margin-top: 10px;
     position: relative;
     font-size: 0;
     text-align: center;
@@ -1271,11 +1337,12 @@ nav {
 
 .footer-copyright {
     float: right;
+    margin-top: 10px;
 }
 
 .copyright {
     display: inline-block;
-    vertical-align: top;
+    vertical-align: bottom;
     position: relative;
     font-size: 0;
     text-align: center;
@@ -1393,7 +1460,7 @@ nav {
 .catalog-wrapper {
     background: linear-gradient(to left, #ffffff 70%, #efefef 30%);
     z-index: -10;
-    
+    padding-bottom: 74px;
 }
 
 .filters-word {
@@ -1516,6 +1583,11 @@ nav {
     cursor: pointer;
 }
 
+.range-controls .toggle:active {
+    border-color: #ffffff;
+    background-color: #91c92f;
+}
+
 .range-controls .toggle-min {
   left: 0;
 }
@@ -1631,6 +1703,7 @@ fieldset label:last-child {
 }
 
 .submit-btn {
+    margin-top: 45px;
     border: none;
     width: 200px;
     background-color: transparent;

@@ -15,9 +15,10 @@
               <h1 class="logo"><a href="#">Device</a></h1>
               <div class="user-block clearfix">
                   <div class="search">
-                      <form name="search">                              
-                          <input class="search-field" type="search" placeholder="Поиск по сайту">
-                          <button class="find-btn" type="submit"  hidden>Найти</button>
+                      <form name="search" class="search-form">
+                          <label for="search"><img src="img/icon-search.png" alt="Поиск"></label>
+                          <input id="search" class="search-field" type="search" placeholder="Поиск по сайту">
+                          <button class="search-btn" type="submit">Найти</button>
                       </form>
                   </div>
                   <ul class="breadcrumbs">
@@ -28,21 +29,23 @@
                   </div>
                   <nav class="clearfix">
                       <ul class="catalog-navigation">
-                          <li>
-                              <a class="catalog" href="#">Каталог товаров</a>
-                              <ul class="catalog-drop">
-                                  <div class="column-1">
-                                      <li><a href="#">Виртуальная реальность</a></li>
-                                      <li><a href="#">Моноподы для селфи</a></li>
-                                      <li><a href="#">Экшн-камеры</a></li>
-                                  </div>
-                                  <div class="column-2">
-                                      <li><a href="#">Фитнес-браслеты</a></li>
-                                      <li><a href="#">Умные часы</a></li>
-                                  </div>
-                                  <div class="column-3">
+                          <li><a class="catalog" href="#">Каталог товаров</a></li>
+                              <li><ul class="catalog-drop">
+                                  <li><ul class="column-1">
+                                          <li><a href="#">Виртуальная реальность</a></li>
+                                          <li><a href="#">Моноподы для селфи</a></li>
+                                          <li><a href="#">Экшн-камеры</a></li>
+                                      </ul>
+                                  </li>
+                                  <li><ul class="column-2">
+                                          <li><a href="#">Фитнес-браслеты</a></li>
+                                          <li><a href="#">Умные часы</a></li>
+                                      </ul>
+                                  </li>
+                                  <li><ul class="column-3">
                                       <li><a href="#">Квадрокоптеры</a></li>
-                                  </div>
+                                      </ul>
+                                  </li>
                               </ul>
                           </li>
                       </ul>
@@ -73,6 +76,9 @@
             <div class="slides">
                 
                 <div class="slide slide1">
+                    <div class="slider-image">
+                        <img src="img/slider-1.png" alt="селфи-палка">
+                    </div>
                     <div class="slide-text">
                         <div class="elements">
                             <div class="slide-line"></div>
@@ -82,14 +88,14 @@
                         <p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) 
                         метров длиной и весом всего 5 килограмм.</p>
                         <div class="slider-controls">
-                        <a class="btn" href="#">Подробнее</a>
+                        <a class="btn slider-btn" href="#">Подробнее</a>
                         <div class="toggles">
-                            <label for="btn-1"></label>
+                            <label for="btn-1" class="slide1-checked"></label>
                             <label for="btn-2"></label>
                             <label for="btn-3"></label>
                         </div>
                         </div>
-                        <div clas="slide-features">
+                        <div class="slide-features">
                             <div class="slide-feature">
                                 <p>8,5 м</p>
                                 <p>Длина палки</p>
@@ -106,6 +112,9 @@
                     </div>
                 </div>
                 <div class="slide slide2">
+                    <div class="slider-image">
+                        <img src="img/slider-2.png" alt="селфи-палка">
+                    </div>
                     <div class="slide-text">
                         <div class="elements">
                             <div class="slide-line"></div>
@@ -115,10 +124,10 @@
                         <p>Мотивирующие фитнес-браслеты помогут найти в себе силы 
                         не пропускать занятия и соблюдать диету.</p>
                         <div class="slider-controls">
-                        <a class="btn" href="#">Подробнее</a>
+                        <a class="btn slider-btn" href="#">Подробнее</a>
                         <div class="toggles">
                             <label for="btn-1"></label>
-                            <label for="btn-2"></label>
+                            <label for="btn-2" class="slide2-checked"></label>
                             <label for="btn-3"></label>
                         </div>
                         </div>
@@ -131,6 +140,9 @@
                     </div>
                 </div>
                 <div class="slide slide3">
+                    <div class="slider-image slider-image-3">
+                        <img src="img/slider-3.png" alt="селфи-палка">
+                    </div>
                     <div class="slide-text">
                         <div class="elements">
                             <div class="slide-line"></div>
@@ -140,14 +152,14 @@
                         <p>Этот обычный, на первый взгляд, квадрокоптер оснащен 
                         мощным лазером, замаскированным под стандартную камеру.</p>
                         <div class="slider-controls">
-                        <a class="btn" href="#">Подробнее</a>
+                        <a class="btn slider-btn" href="#">Подробнее</a>
                         <div class="toggles">
                             <label for="btn-1"></label>
                             <label for="btn-2"></label>
-                            <label for="btn-3"></label>
+                            <label for="btn-3" class="slide3-checked"></label>
                         </div>                        
                         </div>
-                        <div clas="slide-features">
+                        <div class="slide-features">
                             <div class="slide-feature">
                                 <p>800 м</p>
                                 <p>Дальность полета</p>
@@ -210,7 +222,7 @@
                                   <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
                               </div>
                               <div class="services-image">
-                                  <img src="img/delivery.png">
+                                  <img src="img/delivery.png" alt="Доставка">
                               </div>
                           </div>
                           <div class="services-slide" id="services-slide-2">
@@ -219,7 +231,7 @@
                                   <p>Если из-за возгарания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
                               </div>
                               <div class="services-image">
-                                  <img src="img/warranty.png">
+                                  <img src="img/warranty.png" alt="Гарантия">
                               </div>
                           </div>
                           <div class="services-slide" id="services-slide-3">
@@ -228,7 +240,7 @@
                                   <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
                               </div>
                               <div class="services-image">
-                                  <img src="img/credit.png">
+                                  <img src="img/credit.png" alt="credit">
                               </div>
                           </div>
                       </div>
@@ -319,7 +331,7 @@
           </div>
           <div class="modal-content-map">
               <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1125488779976!2d37.52742931603996!3d55.68703098053581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1472743752335" width="960" height="560" frameborder="0" style="border:0" allowfullscreen></iframe>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1125488779976!2d37.52742931603996!3d55.68703098053581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1472743752335" width="960" height="560" style="border:0" allowfullscreen></iframe>
           </div>
     <script>
         var writeUs = document.querySelector(".write-us-btn");
