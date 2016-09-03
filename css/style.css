@@ -375,6 +375,15 @@ h3  {
     background-position: -5px -799px;
 }
 
+.breadcrumbs-catalog li:nth-child(2) {
+    margin-left: 20px;
+    margin-right: 70px;
+}
+
+.logout {
+    
+}
+
 nav {
     min-height: 20px;
     width: 1040px;
@@ -388,11 +397,11 @@ nav {
 
 .catalog-drop {
     position: absolute;
-    padding-left: 3px;
+    padding-left: 60px;
     top: -9999em;
-    left: 0;
-    width: 1040px;
-    height: 125px;
+    left: -60px;
+    width: 1100px;
+    height: 135px;
     background-color: #f7e296;
     border-top: 30px solid transparent;
     z-index: 1;
@@ -542,6 +551,10 @@ nav {
     height: 300px;
     margin-top: 40px;
     z-index: -10;
+}
+
+.yellow-bg-catalog {
+    height: 185px;
 }
 
 .header-wrapper {
@@ -1402,17 +1415,24 @@ nav {
 
 /* CATALOG.HTML */
 
-/*
-.body-catalog {
-    background: linear-gradient(to left, #ffffff 70%, #efefef 30%);
-    background-position: top center;
-    background-size: auto, 1000px;
+
+
+.main-header {
+/*    margin-bottom: 50px;*/
 }
-*/
+
+.catalog-main .container {
+    width: 1040px;
+}
+
+.category-title {
+    margin-bottom: 30px;
+}
 
 .path {
     display: block;
-    margin-bottom: 50px;
+    margin-top: 0;
+    margin-bottom: 40px;
     list-style: none;
     padding-left: 0;
 }
@@ -1458,15 +1478,24 @@ nav {
 }
 
 .catalog-wrapper {
-    background: linear-gradient(to left, #ffffff 70%, #efefef 30%);
+    background: linear-gradient(to left, #ffffff 68%, #efefef 34%);
     z-index: -10;
     padding-bottom: 74px;
+}
+
+.catalog-wrapper .container {
+    width: 1160px;
+}
+
+.filters {
+    margin-left: 55px;
 }
 
 .filters-word {
     float: left;
     width: 200px;
     height: 70px;
+    margin-left: 55px;
 }
 
 .filters-word span{
@@ -1476,6 +1505,10 @@ nav {
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 3px;
+}
+
+.search-results {
+    margin-left: 50px;
 }
 
 .search-results-top {
@@ -1548,6 +1581,10 @@ nav {
     margin-bottom: 25px;
 }
 
+.filters fieldset {
+    margin: 0;
+}
+
 
 .price-range {
     width: 200px;
@@ -1597,6 +1634,7 @@ nav {
 }
 
 .price-controls {
+    margin-bottom: 40px;
     opacity: 0.2;
 }
 
@@ -1606,13 +1644,18 @@ nav {
     width: 70px;
 }
 
+.color {
+    padding-top: 10px;
+}
+
 input[type="checkbox"] {
     display: none;
 }
 
 input[type="checkbox"] + label {
     display: block;
-    line-height: 20px;
+    font-size: 14px;
+    line-height: 18px;
     padding-left: 45px;
     position: relative;
     cursor: pointer;
@@ -1647,7 +1690,7 @@ input[type="radio"] {
 
 input[type="radio"] + label {
     display: block;
-    margin: 10px 0;
+    margin: 0;
     line-height: 20px;
     padding-left: 45px;
     position: relative;
@@ -1685,12 +1728,20 @@ input[type="radio"]:checked + label::after {
 .filters fieldset {
     border: none;
     border-bottom: 2px solid #000000;
-    margin-bottom: 12px;
+    margin-bottom: 0;
     padding: 0;
 }
 
+.filters .bluetooth {
+    border-bottom: none;
+}
+
+.catalog-color {
+    padding-bottom: 0;
+}
+
 .filters legend:first-child {
-    padding-top: 25px;
+    padding-top: 10px;
 }
 
 fieldset label:last-child {
@@ -1698,17 +1749,14 @@ fieldset label:last-child {
     border-bottom: none;
 }
 
-.bluetooth {
-    border: none;
-}
-
 .submit-btn {
-    margin-top: 45px;
+    margin-top: 12px;
     border: none;
     width: 200px;
     background-color: transparent;
     cursor: pointer;
     z-index: 1;
+    letter-spacing: 2px;
 }
 
 .search-results {
@@ -1721,6 +1769,7 @@ fieldset label:last-child {
     display: inline-block;
     position: relative;
     margin-top: 70px;
+    margin-bottom: -40px;
 }
 
 .item-actions {
@@ -1732,6 +1781,7 @@ fieldset label:last-child {
     text-align: center;
     color: black;
     opacity: 0;
+    margin-bottom: 0;
 }
 
 .catalog-item:hover .item-actions {
@@ -1821,7 +1871,7 @@ fieldset label:last-child {
 }
 
 .page-nav {
-    margin-top: 55px;
+    margin-top: 70px;
     width: 760px;
     height: 70px;
     background-color: #ebebeb;
