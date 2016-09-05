@@ -481,7 +481,6 @@ nav {
     text-transform: uppercase;
     display: inline-block;
     vertical-align: top;
-    margin-left: 30px;
 }
 
 .main-navigation a {
@@ -540,24 +539,21 @@ nav {
     opacity: 0.6;
 }
 
-.delivery {
+.delivery-li {
     letter-spacing: 4px;
-}
-
-.warranty {
-    margin-left: 10px;
-    letter-spacing: 4px;
-}
-
-.contacts {
-    padding-right: 5px;
-    margin-left: 100px;
-    letter-spacing: 4px;
-}
-
-.main-navigation:first-child {
-    display: inline-block;
     float: left;
+    margin-right: 30px;
+}
+
+.warranty-li {
+    letter-spacing: 4px;
+    float: left;
+}
+
+.contacts-li {
+    padding-right: 5px;
+    letter-spacing: 4px;
+    float: right;
 }
 
 .container {
@@ -1499,7 +1495,7 @@ nav {
 }
 
 .catalog-wrapper {
-    background: linear-gradient(to left, #ffffff 68%, #efefef 34%);
+    background: linear-gradient(to left, #ffffff 65%, #efefef 35%);
     z-index: -10;
     padding-bottom: 74px;
 }
@@ -1510,6 +1506,7 @@ nav {
 
 .filters {
     margin-left: 55px;
+    background-color: #efefef;
 }
 
 .filters-word {
