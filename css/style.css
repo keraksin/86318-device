@@ -1,3 +1,24 @@
+@font-face {
+	font-family: 'Open Sans'; 
+	src: local("OpenSans"),
+	url("../fonts/opensans.woff");
+} 
+@font-face {
+	font-family: 'Open Sans light'; 
+	src: local("Open Sans light"),
+	url("../fonts/opensanslight.woff");
+} 
+@font-face {
+	font-family: 'Gilroy Light'; 
+	src: local("Gilroy Light"),
+	url("../fonts/gilroylight.woff");
+} 
+@font-face {
+	font-family: 'Gilroy ExtraBold'; 
+	src: local("Gilroy ExtraBold"),
+		url("../fonts/gilroyextrabold.woff");
+} 
+
 .clearfix::after {
   content: "";
   display: table;
