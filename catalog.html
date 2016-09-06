@@ -11,7 +11,7 @@
 			<div class="container">
 				<div class="yellow-bg yellow-bg-catalog">
 					<div class="header-wrapper">
-						<h1 class="logo"><a href="#">Device</a></h1>
+						<h1 class="logo"><a href="index.html">Device</a></h1>
 						<div class="user-block clearfix">
 							<div class="search">
 								<form name="search" class="search-form">
@@ -85,19 +85,21 @@
 							<span>Фильтр:</span>
 						</div>
 						<div class="search-results-top">
-							<span>Сортировка:
+							<span>Сортировка:</span>
+                            <div class="sort-value">
 							<a class="sort-btn" href="#">По цене</a>
 							<a class="sort-btn" href="#">По типу</a>
 							<a class="sort-btn" href="#">По популярности</a>
-							</span>
-							<span class="sort-buttons">
+							</div>
+							<div class="sort-buttons">
 							<a class="sort-up" href="#"><img src="img/sort-up.png" width="17" height="9" alt="По возрастанию"></a>
 							<a class="sort-down" href="#"><img src="img/sort-down.png" width="17" height="9" alt="По убыванию"></a>
-							</span>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="container">
+                    <div class="filters-bg clearfix">
 					<div class="filters clearfix">
 						<form name="filters" method="get">
 							<fieldset>
@@ -118,27 +120,42 @@
 							</fieldset>
 							<fieldset class="catalog-color">
 								<legend class="color">Цвет</legend>
-								<input type="checkbox" name="color-check-1" value="" id="check1" checked>
-								<label for="check1">Черный</label><br>
-								<input type="checkbox" name="color-check-2" value="" id="check2">
-								<label for="check2">Белый</label><br>
-								<input type="checkbox" name="color-check-3" value="" id="check3">
-								<label for="check3">Синий</label><br>
-								<input type="checkbox" name="color-check-4" value="" id="check4">
-								<label for="check4">Красный</label><br>
-								<input type="checkbox" name="color-check-5" value="" id="check5">
-								<label for="check5">Розовый</label>
+                                <section>
+                                    <input type="checkbox" name="color-check-1" value="" id="check1" checked>
+                                    <label for="check1">Черный</label>
+                                </section>
+                                <section>
+                                    <input type="checkbox" name="color-check-2" value="" id="check2">
+                                    <label for="check2">Белый</label>
+                                </section>
+                                <section>
+                                    <input type="checkbox" name="color-check-3" value="" id="check3">
+                                    <label for="check3">Синий</label>
+                                </section>
+                                <section>
+                                    <input type="checkbox" name="color-check-4" value="" id="check4">
+                                    <label for="check4">Красный</label>
+                                </section>
+                                <section>
+                                    <input type="checkbox" name="color-check-5" value="" id="check5">
+                                    <label for="check5">Розовый</label>
+                                </section>
 							</fieldset>
 							<fieldset class="bluetooth">
 								<legend>Bluetooth</legend>
+                                <section>
 								<input type="radio" name="bt-radio-1" value="" id="radio1">
-								<label for="radio1">Есть</label><br>
+								<label for="radio1">Есть</label>
+                                </section>
+                                <section>
 								<input type="radio" name="bt-radio-1" value="" id="radio2">
-								<label for="radio2">Нет</label><br>
+								<label for="radio2">Нет</label>
+                                </section>
 							</fieldset>
 							<button class="btn submit-btn" type="submit" value="">Показать</button>
 						</form>
 					</div>
+                    </div>
 					<div class="search-results">
 						<article class="catalog-item">
 							<div class="item-actions">
@@ -200,7 +217,7 @@
 		<footer class="main-footer main-footer-catalog">
 			<div class="container clearfix">
 				<div class="footer-top clearfix">
-					<h2 class="footer-logo"><a href="#">Device</a></h2>
+					<h2 class="footer-logo"><a href="index.html">Device</a></h2>
 					<ul class="breadcrumbs-footer">
 						<li><a class="login-footer" href="#">Войти</a></li>
 						<li><a class="compare-footer" href="#">Сравнение</a></li>

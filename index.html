@@ -11,7 +11,7 @@
 			<div class="container">
 				<div class="yellow-bg">
 					<div class="header-wrapper">
-						<h1 class="logo"><a href="#">Device</a></h1>
+						<h1 class="logo"><a>Device</a></h1>
 						<div class="user-block clearfix">
 							<div class="search">
 								<form name="search" class="search-form">
@@ -20,10 +20,11 @@
 									<button class="search-btn" type="submit">Найти</button>
 								</form>
 							</div>
-							<ul class="breadcrumbs">
-								<li><a class="login" href="#">Войти</a></li>
-								<li><a class="compare" href="#">Сравнение</a></li>
-								<li><a class="cart" href="#">Корзина</a></li>
+							<ul class="user-menu">
+								<li class="login-li"><a class="login" href="#">Войти</a></li>
+                                <li class="cart-li"><a class="cart" href="#">Корзина</a></li>
+								<li class="compare-li"><a class="compare" href="#">Сравнить</a></li>
+								
 							</ul>
 						</div>
 						<nav class="clearfix">
@@ -34,7 +35,7 @@
 										<li>
 											<ul class="column-1">
 												<li><a href="#">Виртуальная реальность</a></li>
-												<li><a href="#">Моноподы для селфи</a></li>
+												<li><a href="catalog.html">Моноподы для селфи</a></li>
 												<li><a href="#">Экшн-камеры</a></li>
 											</ul>
 										</li>
@@ -150,7 +151,7 @@
 								<div class="slide-line"></div>
 								<div class="slide-number">03</div>
 							</div>
-							<div class="slide-title">Порхает, как бабочка,<br>жалит, как пчела!</div>
+							<div class="slide-title">Порхает как бабочка,<br>жалит как пчела!</div>
 							<p>Этот обычный, на первый взгляд, квадрокоптер оснащен 
 								мощным лазером, замаскированным под стандартную камеру.
 							</p>
@@ -182,7 +183,7 @@
 					<a href="#">Виртуальная<br>реальность</a>
 				</div>
 				<div class="categories-item">
-					<a class="categories-item-icon" href="#"><img src="img/popular-2.png" alt="Моноподы для селфи"></a>
+					<a class="categories-item-icon" href="#"><img src="img/popular-2.png" alt="Моноподы для селфи" class="monopods"></a>
 					<a href="#">Моноподы<br>для селфи</a>
 				</div>
 				<div class="categories-item">
@@ -221,7 +222,7 @@
 						<div class="services-slide" id="services-slide-1">
 							<div class="services-info">
 								<div class="services-title">Доставка</div>
-								<p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+								<p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо<br>заработаем, поднимая его на ваш этаж.</p>
 							</div>
 							<div class="services-image">
 								<img src="img/delivery.png" alt="Доставка">
@@ -257,6 +258,7 @@
 		</div>
 		<div class="index-content container clearfix">
 			<div class="index-content-left">
+                <div class="black-line"></div>
 				<h3 class="index-content-title">О нас</h3>
 				<p>Огромный выбор гаджетов не оставит равнодушным гика,<br>который есть в каждом из нас.</p>
 				<p>Мы можем доставить ваш товар в самые отдаленные точки России!<br>DEVICE работает со многими транспортными компаниями:</p>
@@ -264,23 +266,24 @@
 					<li>Деловые линии</li>
 					<li>Автотрейдинг</li>
 					<li>ЖелДорЭкспедиция</li>
-				</ul>
-				<div class="btn-container"><a class="btn" href="#">Подробнее о нас</a></div>
+                </ul>
+                <div class="btn-container"><a class="btn" href="#">Подробнее о нас</a></div>
 			</div>
 			<div class="index-content-right">
-				<h3>Контакты</h3>
+                <div class="black-line"></div>
+				<h3 class="index-content-title">Контакты</h3>
 				<p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете<br>проверить работоспособность покупки. Всякое бывает.</p>
 				<a class="js-open-map" href="#"><img src="img/map.jpg" width="560" height="222" alt="Адрес на карте"></a>
-				<div class="btn-container"><a class="btn write-us-btn" href="#">Напишите нам</a></div>
+                <div class="btn-container"><a class="btn write-us-btn" href="#">Напишите нам</a></div>
 			</div>
 		</div>
 		<footer class="main-footer">
 			<div class="container clearfix">
 				<div class="footer-top clearfix">
-					<h2 class="footer-logo"><a href="#">Device</a></h2>
-					<ul class="breadcrumbs-footer">
+					<h2 class="footer-logo"><a>Device</a></h2>
+					<ul class="user-menu-footer">
 						<li><a class="login-footer" href="#">Войти</a></li>
-						<li><a class="compare-footer" href="#">Сравнение</a></li>
+						<li><a class="compare-footer" href="#">Сравнить</a></li>
 						<li><a class="cart-footer" href="#">Корзина</a></li>
 					</ul>
 				</div>
@@ -333,50 +336,6 @@
 			<button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
 			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1125488779976!2d37.52742931603996!3d55.68703098053581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1472743752335" width="960" height="560" style="border:0" allowfullscreen></iframe>
 		</div>
-		<script>
-			var writeUs = document.querySelector(".write-us-btn");
-			
-			var popup = document.querySelector(".modal-content");
-			
-			var popupClose = document.querySelector(".modal-content-close");
-			
-			writeUs.addEventListener("click", function(event) {
-			    event.preventDefault();
-			    popup.classList.add("modal-content-show");
-			});
-			
-			popupClose.addEventListener("click", function(event){
-			    event.preventDefault();
-			    popup.classList.remove("modal-content-show");
-			});
-			
-			
-			
-			// ОЖИВЛЕНИЕ КАРТЫ
-			
-			
-			var mapOpen = document.querySelector(".js-open-map");
-			
-			var mapPopup = document.querySelector(".modal-content-map");
-			var mapClose = mapPopup.querySelector(".modal-content-close");
-			
-			mapOpen.addEventListener("click", function(event) {
-			event.preventDefault();
-			mapPopup.classList.add("modal-content-show");
-			});
-			
-			mapClose.addEventListener("click", function(event) {
-			event.preventDefault();
-			mapPopup.classList.remove("modal-content-show");
-			});
-			
-			window.addEventListener("keydown", function(event) {
-			if (event.keyCode === 27) {
-			  if (mapPopup.classList.contains("modal-content-show")) {
-			    mapPopup.classList.remove("modal-content-show");
-			  }
-			}
-			});
-		</script>
+        <script src="js/script.js"></script>
 	</body>
 </html>
