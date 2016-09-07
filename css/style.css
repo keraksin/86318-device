@@ -32,7 +32,6 @@ body {
     color: #000000;
     font-weight: normal;
     font-family: "Open Sans", "Arial", sans-serif;
-    
 }
 
 
@@ -409,7 +408,7 @@ h3  {
 */
 
 .logout {
-    
+    margin-left: 10px;
 }
 
 nav {
@@ -429,12 +428,12 @@ nav {
     top: -9999em;
     left: -60px;
     width: 1100px;
-    height: 135px;
+    height: 140px;
     background-color: #f7e296;
     border-top: 30px solid transparent;
-    z-index: 1;
     list-style: none;
-    opacity: 0;
+    opacity: 1;
+    z-index: 2001;
 }
 
 .catalog-navigation:hover .catalog-drop {
@@ -511,7 +510,6 @@ nav {
 .catalog {
     position: relative;
     float: left;
-    
     font-size: 18px;
     font-family: "Gilroy ExtraBold", "Arial", sans-serif;
     text-transform: uppercase;
@@ -708,6 +706,7 @@ nav {
     font-weight: bold;
     line-height: 55px;
     display: block;
+    z-index: 2;
 }
 
 .slide-text p {
@@ -1137,7 +1136,7 @@ nav {
 .index-content .btn-container {
     margin-top: 50px;
     width: 260px;
-    bottom: 0;    
+/*    bottom: 0;    */
 }
 
 .index-content a {    
@@ -1298,7 +1297,7 @@ nav {
     font-weight: bold;
     font-family: "Gilroy", "Arial", sans-serif;
     text-decoration: none;
-    letter-spacing: 3.5px;
+    letter-spacing: 4px;
 }
 
 .footer-nav a:hover {
@@ -1484,8 +1483,9 @@ nav {
 
 .category-title {
     line-height: 53px;
+    margin-top: 35px;
     margin-bottom: 12px;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
 }
 
 .path {
@@ -1534,13 +1534,14 @@ nav {
 
 .filters-top-bg {
     background-color: rgba(0, 0, 0, 0.08);
+    
 }
 
 .catalog-wrapper {
     background: -webkit-linear-gradient(right, #ffffff 70%, #efefef 30%);
     background: linear-gradient(to left, #ffffff 70%, #efefef 30%);
     z-index: -10;
-    padding-bottom: 0;
+/*    padding-bottom: 74px;*/
 }
 
 .catalog-wrapper .container {
@@ -1548,14 +1549,20 @@ nav {
 }
 
 .filters {
+    padding-top: 5px;
     margin-left: 55px;
     background-color: #efefef;
 }
 
+.container-bg {
+    display: table;
+}
+
 .filters-bg {
-    display: inline-block;
+    display: table-cell;
     background-color: #efefef;
-    padding-bottom: 500px;
+    vertical-align: top;
+    padding-right: 64px;
 }
 
 .filters-word {
@@ -1563,6 +1570,7 @@ nav {
     width: 200px;
     height: 70px;
     margin-left: 55px;
+    padding-right: 72px;
     background-color: #dbdbdb;
 }
 
@@ -1577,6 +1585,7 @@ nav {
 
 .search-results {
     margin-left: 50px;
+    padding-bottom: 76px;
 }
 
 .search-results-top {
@@ -1812,7 +1821,12 @@ input[type="radio"]:checked + label::after {
 }
 
 .filters .bluetooth {
+    margin-bottom: 10px;
     border-bottom: none;
+}
+
+.bluetooth legend {
+    margin-bottom: 15px;
 }
 
 .catalog-color {
@@ -1820,7 +1834,7 @@ input[type="radio"]:checked + label::after {
 }
 
 .filters legend:first-child {
-    padding-top: 10px;
+    padding-top: 8px;
     padding-bottom: 10px;
 }
 
@@ -1854,6 +1868,10 @@ fieldset label:last-child {
     position: relative;
     margin-top: 70px;
     margin-bottom: -40px;
+}
+
+.item-info {
+    margin-top: 6px;
 }
 
 .item-actions {
@@ -1937,12 +1955,8 @@ fieldset label:last-child {
     margin-right: 36px;
 }
 
-.item-info {
-    
-}
-
 .catalog-item-title {
-    width: 180px;
+    width: 270px;
     font-weight: bold;
     font-family: "Gilroy", "Arial", sans-serif;
     font-size: 18px;
@@ -1957,7 +1971,7 @@ fieldset label:last-child {
 }
 
 .page-nav {
-    margin-top: 70px;
+    margin-top: 55px;
     width: 760px;
     height: 70px;
     background-color: #ebebeb;
@@ -1975,7 +1989,7 @@ fieldset label:last-child {
     font-weight: bold;
     font-size: 16px;
     color: #000000;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
 }
 
 .page-prev {
@@ -2168,7 +2182,6 @@ fieldset label:last-child {
 
 .write-us-name {
     margin-right: 36px;
-    
 }
 
 .label-text-area {
