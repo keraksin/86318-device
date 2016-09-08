@@ -1,23 +1,19 @@
 @font-face {
-	font-family: 'Open Sans'; 
-	src: local("OpenSans"),
-	url("../fonts/opensans.woff");
+    font-family: 'Open Sans'; 
+    src: local("OpenSans"), url("../fonts/opensans.woff");
 } 
 @font-face {
-	font-family: 'Open Sans light'; 
-	src: local("Open Sans light"),
-	url("../fonts/opensanslight.woff");
+    font-family: 'Open Sans light'; 
+    src: local("Open Sans light"), url("../fonts/opensanslight.woff");
 } 
 @font-face {
-	font-family: 'Gilroy Light'; 
-	src: local("Gilroy Light"),
-	url("../fonts/gilroylight.woff");
+    font-family: 'Gilroy Light'; 
+    src: local("Gilroy Light"), url("../fonts/gilroylight.woff");
 } 
 @font-face {
-	font-family: 'Gilroy ExtraBold'; 
-	src: local("Gilroy ExtraBold"),
-    url("../fonts/gilroyextrabold.woff");
-} 
+    font-family: 'Gilroy ExtraBold'; 
+    src: local("Gilroy ExtraBold"), url("../fonts/gilroyextrabold.woff");
+}
 
 .clearfix::after {
     content: "";
@@ -2092,6 +2088,7 @@ fieldset label:last-child {
 }
 
 .modal-content {
+    z-index: 100;
     display: none;
     position: fixed;
     top: 0;
