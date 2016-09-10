@@ -1380,6 +1380,7 @@ nav
 }
 .copyright
 {
+    padding-top: 9px;
 	display: inline-block;
 	font-size: 0;
 	height: 34px;
@@ -1934,13 +1935,11 @@ fieldset label:last-child
 .page-nav
 {
 	background-color: #ebebeb;
-	display: flex;
-	display: -ms-flexbox;
-	display: -webkit-box;
 	height: 70px;
-	margin-top: 55px;
+	margin-top: 60px;
 	width: 760px;
 	z-index: 0;
+    margin-bottom: -4px;
 }
 .page-nav-btn
 {
@@ -1956,6 +1955,7 @@ fieldset label:last-child
 .page-prev
 {
 	position: relative;
+    float: left;
 	text-align: center;
 	width: 130px;
 }
@@ -1977,6 +1977,7 @@ fieldset label:last-child
 .page-next
 {
 	position: relative;
+    float: right;
 	text-align: center;
 	width: 130px;
 }
@@ -1997,38 +1998,34 @@ fieldset label:last-child
 }
 .page-number-wrapper
 {
-	display: inline-flex;
-	display: -ms-inline-flex;
-	display: -ms-inline-flexbox;
-	display: -webkit-inline-box;
-	flex-wrap: nowrap;
-	justify-content: center;
-	ms-flex-pack: center;
-	ms-flex-wrap: nowrap;
-	webkit-box-pack: center;
-	width: 500px;
+	width: 130px;
+    float: left;
+    margin-left: 195px;
 }
 .page-number
 {
-	opacity: 0.3;
-	text-align: center;
-	width: 40px;
+    opacity: 0.3;
+    text-align: center;
+    width: 35px;
+    display: inline-block;
+}
+
+.page-number-wrapper .page-number:last-child
+{
+    width: 27px;
 }
 .page-number:hover
 {
-	display: table-cell;
 	opacity: 0.6;
 	text-align: center;
 }
 .page-number:active
 {
-	display: table-cell;
 	opacity: 1;
 	text-align: center;
 }
 .page-nav .active
 {
-	display: table-cell;
 	opacity: 1;
 	text-align: center;
 }
@@ -2049,9 +2046,7 @@ fieldset label:last-child
 .modal-content
 {
 	background-color: #ffffff;
-	box-shadow: 0 10px 20px rgba(0,0,0,0.2),
- -20px 5px 40px rgba(0,0,0,0.075),
- 20px 5px 40px rgba(0,0,0,0.075);
+	box-shadow: 0 10px 20px rgba(0,0,0,0.2), -20px 5px 40px rgba(0,0,0,0.075), 20px 5px 40px rgba(0,0,0,0.075);
 	color: #000000;
 	display: none;
 	height: 555px;
